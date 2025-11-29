@@ -1,0 +1,61 @@
+Create a modern responsive company website for **INCTECT METROLOGICAL CENTER CO., LTD (IMC)**.  
+Reference content: [https://www.imcinstrument.com/](https://www.imcinstrument.com/)  
+Reference layout: PROGRAM IMC.pdf  
+
+### Design Requirements
+- Professional corporate style, clean white background with accent colors (blue and gray).  
+- Responsive design (desktop, tablet, mobile).  
+- Sticky top navigation bar with company logo and menu.  
+- Use modern typography and card layout for services and products.  
+
+### Navigation Menu (Top Bar)
+- HOME  
+- PRODUCTS  
+- SERVICE  
+- NEWS  
+- CONTACT  
+
+### Hero Section
+- Company name and slogan (e.g. "Professional Calibration, Testing, and Laboratory Solutions").  
+- Background image related to laboratory/medical equipment.  
+- Call-to-action button: "Explore Our Services".  
+
+### Sections  
+
+#### 1. Products
+Show main categories with icons/cards:
+- Laboratory Equipment  
+- Medical Equipment  
+- Furniture Lab & Design  
+- Calibration and Testing Laboratory  
+- Industry (Temperature Mapping, Equipment)  
+
+#### 2. Services
+Cards or list format:
+- Calibration and Testing Medical Device  
+- Equipment Repair & Automation  
+- Design Service (Automation, Equipment Relocation & Installation, Laboratory Design)  
+- Training & Consult (Academy)  
+- Software Management (Calibration & Testing Laboratory, Medical Equipment Management)  
+
+#### 3. Certified Instruments
+Display in grid or table format:
+1. Electrical  
+2. Optical & Chemical  
+3. Medical Device  
+4. Temperature & Humidity  
+5. Torque & Force  
+6. Temperature & Humidity Mapping  
+7. Dimension  
+8. Pressure & Vacuum  
+
+#### 4. Call to Action / Contact
+- Short paragraph about IMC commitment.  
+- Contact form (Name, Email, Message).  
+- Address and phone number.  
+- Google Map embed (head office location).  
+
+### Footer
+- Quick links (Home, Products, Service, Contact).  
+- Social media icons (Facebook, LinkedIn).  
+- Copyright © IMC 2025.
