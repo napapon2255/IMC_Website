@@ -1,35 +1,42 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Microscope, FlaskConical, Armchair, Scale, Thermometer, Activity } from "lucide-react";
+import { Microscope, FlaskConical, Armchair, Scale, Thermometer, Activity, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 
 const products = [
   {
     title: "Laboratory Equipment",
+    slug: "laboratory-equipment",
     icon: FlaskConical,
     description: "High-precision instruments for chemical and biological analysis."
   },
   {
     title: "Medical Equipment",
+    slug: "medical-equipment",
     icon: Activity,
     description: "Standardized medical devices for hospitals and clinics."
   },
   {
     title: "Furniture Lab & Design",
+    slug: "furniture-lab-design",
     icon: Armchair,
     description: "Ergonomic and durable laboratory furniture solutions."
   },
   {
     title: "Calibration & Testing",
+    slug: "calibration-testing",
     icon: Scale,
     description: "ISO/IEC 17025 certified calibration services."
   },
   {
     title: "Industry Solutions",
+    slug: "industry-solutions",
     icon: Thermometer,
     description: "Temperature mapping and industrial measurement equipment."
   },
   {
     title: "Microscopy & Optical",
+    slug: "microscopy-optical",
     icon: Microscope,
     description: "Advanced optical instruments for research and inspection."
   }
@@ -56,19 +63,24 @@ export default function Products() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 border-none shadow-sm group bg-white">
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <product.icon className="h-6 w-6" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-foreground">{product.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {product.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href={`/products/${product.slug}`}>
+                <Card className="h-full hover:shadow-lg transition-all duration-300 border-none shadow-sm group bg-white cursor-pointer relative overflow-hidden">
+                  <CardHeader>
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                      <product.icon className="h-6 w-6" />
+                    </div>
+                    <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{product.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      {product.description}
+                    </p>
+                    <div className="flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-[-10px] group-hover:translate-x-0">
+                      View Products <ArrowRight className="ml-2 h-4 w-4" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </div>
