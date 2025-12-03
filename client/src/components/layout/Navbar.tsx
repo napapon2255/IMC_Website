@@ -1,11 +1,13 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter"; // 1. เพิ่ม useLocation
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import imcLogo from "@/assets/images/Logo-IMC.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location, setLocation] = useLocation(); // 2. ดึงค่า location ปัจจุบันมาใช้
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -15,14 +17,31 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
-  const scrollToSection = (id: string) => {
+  // 3. ปรับแก้ฟังก์ชันการนำทาง
+  const handleNavigation = (id: string) => {
     setIsOpen(false);
+    
+    // ถ้าลิ้งค์เป็น "#" เฉยๆ ไม่ต้องทำอะไร
     if (id === "#") return;
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+
+    // ตรวจสอบว่า "ตอนนี้อยู่หน้าแรก (Home)" หรือไม่?
+    if (location === "/") {
+      // --- กรณีอยู่หน้าแรกแล้ว ให้เลื่อนหา Section ---
+      if (id === "#home") {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const element = document.querySelector(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // --- กรณีอยู่หน้าอื่น (เช่นหน้า Products) ---
+      // สั่งให้กลับไปหน้าแรกทันที
+      setLocation("/");
+      
+      // (Optional) ถ้าอยากให้พอกลับไปแล้วเลื่อนไปหา Section นั้นด้วย
+      // อาจต้องใช้ setTimeout หรือเก็บ state เพิ่ม แต่เบื้องต้นแค่กลับหน้าแรกได้ก็แก้ปัญหาแล้วครับ
     }
   };
 
@@ -30,12 +49,14 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-2" onClick={() => scrollToSection("#home")}>
-            <a href="#home" className="cursor-pointer flex items-center gap-2">
-              <div className="bg-primary text-primary-foreground font-heading font-bold text-xl px-3 py-1 rounded-md">
-                IMC
-              </div>
+          {/* Logo - แก้ให้เรียกใช้ handleNavigation */}
+          <div className="flex items-center gap-2" onClick={() => handleNavigation("#home")}>
+            <a href="#home" className="cursor-pointer flex items-center gap-2" onClick={(e) => e.preventDefault()}>
+              <img
+                src={imcLogo}         // เรียกใช้ตัวแปรรูปภาพที่ import มา
+                alt="IMC Logo"        // คำอธิบายรูปภาพสำหรับ SEO และการเข้าถึง
+                className="h-12 w-auto object-contain" // กำหนดความสูง และให้ความกว้างปรับอัตโนมัติ
+              />
               <div className="hidden md:block">
                 <span className="block font-heading font-bold text-primary leading-none">INCTECT</span>
                 <span className="block text-[10px] font-medium text-muted-foreground tracking-widest">METROLOGICAL CENTER</span>
@@ -51,14 +72,14 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection(link.href);
+                  handleNavigation(link.href); // แก้ให้ใช้ฟังก์ชันใหม่
                 }}
                 className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <Button onClick={() => scrollToSection("#contact")}>Get Quote</Button>
+            <Button onClick={() => handleNavigation("#contact")}>Get Quote</Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -77,14 +98,14 @@ export default function Navbar() {
                       href={link.href}
                       onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection(link.href);
+                        handleNavigation(link.href); // แก้ให้ใช้ฟังก์ชันใหม่
                       }}
                       className="text-lg font-medium hover:text-primary"
                     >
                       {link.name}
                     </a>
                   ))}
-                  <Button className="w-full" onClick={() => scrollToSection("#contact")}>Get Quote</Button>
+                  <Button className="w-full" onClick={() => handleNavigation("#contact")}>Get Quote</Button>
                 </div>
               </SheetContent>
             </Sheet>

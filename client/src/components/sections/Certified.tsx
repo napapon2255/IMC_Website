@@ -1,15 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
-
-const instruments = [
-  "Electrical",
-  "Optical & Chemical",
-  "Medical Device",
-  "Temperature & Humidity",
-  "Torque & Force",
-  "Temperature & Humidity Mapping",
-  "Dimension",
-  "Pressure & Vacuum"
-];
+import { Link } from "wouter"; // เรียกใช้ Link
+import certifiedData from "@/data/certified_data.json"; // ดึงข้อมูล JSON เข้ามาตรงๆ
 
 export default function Certified() {
   return (
@@ -23,14 +14,16 @@ export default function Certified() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          {instruments.map((item, index) => (
-            <div 
-              key={index}
-              className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
-            >
-              <CheckCircle2 className="h-5 w-5 text-accent shrink-0" />
-              <span className="font-medium">{item}</span>
-            </div>
+          {certifiedData.map((item) => (
+            // ใช้ Link ครอบ div เพื่อให้กดแล้วเปลี่ยนหน้า
+            <Link key={item.id} href={item.href} className="cursor-pointer group">
+              <div 
+                className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-accent/50 transition-all duration-300"
+              >
+                <CheckCircle2 className="h-5 w-5 text-accent shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-medium group-hover:text-accent transition-colors">{item.name}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

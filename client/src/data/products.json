@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Our Products",
+    "slug": "our-products",
+    "icon": "Package",
+    "description": "Explore our comprehensive range of high-quality equipment."
+  },
+  {
+    "title": "Calibration and Testing Laboratory",
+    "slug": "calibration-testing",
+    "icon": "Scale",
+    "description": "ISO/IEC 17025 certified calibration and precise testing services."
+  },
+  {
+    "title": "Training & Consultant Academy",
+    "slug": "training-consultant",
+    "icon": "GraduationCap",
+    "description": "Professional training courses and expert consultation services."
+  },
+  {
+    "title": "Software Management",
+    "slug": "software-management",
+    "icon": "Monitor",
+    "description": "Advanced software solutions for data and system management."
+  },
+  {
+    "title": "Automation Control & Design",
+    "slug": "automation-control",
+    "icon": "Cpu",
+    "description": "Custom automation systems and control design for efficiency."
+  },
+  {
+    "title": "Repair & Inspection",
+    "slug": "repair-inspection",
+    "icon": "Wrench",
+    "description": "Reliable repair, maintenance, and equipment inspection services."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "เครื่องมือสอบเทียบมาตรฐาน / Calibrator",
+    "items": "Pressure calibrator, Hand pump, Dry block calibrator, Micro-bath, Multifunction process calibrator, Temperature calibrator, Three-phase meter calibrator",
+    "icon": "Settings2"
+  },
+  {
+    "title": "เฟอร์นิเจอร์ห้องปฏิบัติการ / Laboratory Design",
+    "items": "โต๊ะทำงานกลาง, โต๊ะทำงานติดผนัง, โต๊ะวางเครื่องมือ, ชั้นวางอุปกรณ์, ตู้เก็บสารเคมี, ตู้ดูดควัน (Fume hood), Laminar flow, เก้าอี้ห้องปฏิบัติการ Cleanroom",
+    "icon": "Armchair"
+  },
+  {
+    "title": "เครื่องมือด้านวิเคราะห์ / Analytical",
+    "items": "pH/Conduc/TDS/ORP Meter, ไตเตรต, ตู้บ่มเชื้อ, ตู้ทำความเย็น, ตู้ควบคุมอุณหภูมิ, เตาเผา, Incubator, Freezer, Water bath, Autoclave, Viscometer, Centrifuge",
+    "icon": "FlaskConical"
+  },
+  {
+    "title": "เครื่องมือด้านสิ่งแวดล้อม / Environment",
+    "items": "เครื่องวัดเสียง, เครื่องวัดแสง, เครื่องวัดแรงสั่นสะเทือน, เครื่องวัดลม, Anemo meter, Lux & UV meter, Vibration meter, Data logger, Thermo-hygro meter, Sound level meter",
+    "icon": "Wind"
+  },
+  {
+    "title": "เครื่องมือด้านทดสอบ / Testing",
+    "items": "เครื่องวัดแรงดึง-แรงกด, เครื่องชั่ง, เครื่องวัดความแข็ง, เครื่องวัดแรงบิด, Torque tester, Hardness tester, Force gauge, Roughness tester, Gloss meter, Universal testing machine",
+    "icon": "ClipboardCheck"
+  },
+  {
+    "title": "เครื่องมือด้านมิติ / Dimension",
+    "items": "เวอร์เนียคาลิปเปอร์, ไมโครมิเตอร์, ไดอัลเกจ, ไมโครสโคป, โต๊ะแกรนิต, เครื่องวัดระดับ, Vernier caliper, Level meter, Gauge block, Profile projector, Microscope",
+    "icon": "Ruler"
+  },
+  {
+    "title": "เครื่องมือด้านไฟฟ้า / Electrical",
+    "items": "มัลติมิเตอร์, แคลมป์มิเตอร์, เครื่องวัดฉนวน, เครื่องวัดกราวด์, Multimeter, Clamp, Tachometer, Oscilloscope, Earth tester, LCR meter, Power Supply, Insulation tester",
+    "icon": "Zap"
+  },
+  {
+    "title": "เครื่องมือด้านอุณหภูมิ / Temperature",
+    "items": "โพรบวัดอุณหภูมิ, เทอร์โมคัปเปิล, เครื่องบันทึกอุณหภูมิ, Thermometer, Temp controller, RTD Probe PT 100, Infrared thermometer, Temp gauge, Temp transmitter",
+    "icon": "Thermometer"
+  },
+  {
+    "title": "เครื่องมือด้านความดัน / Pressure",
+    "items": "เครื่องวัดความดัน, สวิทซ์ความดัน, เกจวัดความดันและสุญญากาศ, Pressure gauge, Pressure sensor, Pressure transmitter, Barometer, Vacuum gauge",
+    "icon": "Gauge"
+  },
+  {
+    "title": "เครื่องมือด้านอัตราการไหล / Flow meter",
+    "items": "เครื่องวัดอัตราการไหล น้ำ/อากาศ/ก๊าซ/น้ำมัน, Liquid flow meter, Gas flow meter, Oil flow meter, Mass flow meter, Thermal flow, Ultrasonic level",
+    "icon": "Waves"
+  },
+  {
+    "title": "เครื่องมือด้านโหลดเซลล์ / Load cell",
+    "items": "โหลดเซลล์ทุกชนิด, หน้าจออ่านค่า, เครื่องชั่งแบบแขวน, เครื่องวัดแรง, กล่องรวมสัญญาณโหลดเซลล์, Load cell indicator, Junction Box, Weighing module, Force sensor",
+    "icon": "Weight"
+  },
+  {
+    "title": "เครื่องมือวัดแก๊ส / Gas Detector",
+    "items": "เครื่องวัดแก๊ส, หน้าจออ่านค่าแก๊ส, แก๊สเซนเซอร์, ชุดปรับแก๊สอัตโนมัติ, Portable gas detector, Fixed gas, Gas monitoring, Gas analyzers, Calibration gas set",
+    "icon": "Siren"
+  }
+]
