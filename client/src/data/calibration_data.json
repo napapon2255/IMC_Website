@@ -1,0 +1,92 @@
+[
+  {
+    "id": "electrical",
+    "name_en": "Electrical Calibration",
+    "name_th": "สอบเทียบทางไฟฟ้า",
+    "desc_en": "Calibration for multimeter, clamp meter, insulation tester, etc.",
+    "desc_th": "บริการสอบเทียบมัลติมิเตอร์ แคลมป์มิเตอร์ และเครื่องมือวัดไฟทุกชนิด",
+    "icon": "Zap",
+    "href": "/certified/electrical"
+  },
+  {
+    "id": "temp-humidity",
+    "name_en": "Temperature & Humidity Calibration",
+    "name_th": "สอบเทียบอุณหภูมิและความชื้น",
+    "desc_en": "Thermometer, hygrometer, environmental chambers calibration.",
+    "desc_th": "สอบเทียบเทอร์โมมิเตอร์ เครื่องวัดความชื้น และตู้ควบคุมอุณหภูมิ",
+    "icon": "Thermometer",
+    "href": "/certified/temp-humidity"
+  },
+  {
+    "id": "pressure-vacuum",
+    "name_en": "Pressure & Vacuum Calibration",
+    "name_th": "สอบเทียบความดันและสุญญากาศ",
+    "desc_en": "Pressure gauges, vacuum gauges, manometers.",
+    "desc_th": "สอบเทียบเกจวัดแรงดัน เกจวัดสุญญากาศ และเซนเซอร์ความดัน",
+    "icon": "Gauge",
+    "href": "/certified/pressure-vacuum"
+  },
+  {
+    "id": "mass-balance",
+    "name_en": "Mass & Balance Calibration",
+    "name_th": "สอบเทียบมวลและเครื่องชั่ง",
+    "desc_en": "Calibration for electronic balances, scales, and standard weights.",
+    "desc_th": "สอบเทียบเครื่องชั่งอิเล็กทรอนิกส์ ตุ้มน้ำหนักมาตรฐาน",
+    "icon": "Scale",
+    "href": "/certified/mass-balance"
+  },
+  {
+    "id": "torque-force",
+    "name_en": "Torque & Force Calibration",
+    "name_th": "สอบเทียบแรงบิดและแรง",
+    "desc_en": "Torque wrenches, force gauges, tension meters.",
+    "desc_th": "สอบเทียบประแจปอนด์ เครื่องวัดแรงดึง-แรงกด",
+    "icon": "Activity",
+    "href": "/certified/torque-force"
+  },
+  {
+    "id": "dimension",
+    "name_en": "Dimension Calibration",
+    "name_th": "สอบเทียบเครื่องมือวัดละเอียด (มิติ)",
+    "desc_en": "Vernier calipers, micrometers, dial gauges.",
+    "desc_th": "สอบเทียบเวอร์เนีย ไมโครมิเตอร์ และเครื่องมือวัดขนาด",
+    "icon": "Ruler",
+    "href": "/certified/dimension"
+  },
+  {
+    "id": "chemical",
+    "name_en": "Chemical Calibration",
+    "name_th": "สอบเทียบทางเคมี",
+    "desc_en": "pH meters, conductivity meters, spectrophotometers.",
+    "desc_th": "สอบเทียบเครื่องวัด pH, ค่าการนำไฟฟ้า และสารเคมี",
+    "icon": "FlaskConical",
+    "href": "/certified/chemical"
+  },
+  {
+    "id": "field-instrument",
+    "name_en": "Field Instrument Calibration",
+    "name_th": "สอบเทียบเครื่องมือภาคสนาม",
+    "desc_en": "On-site calibration for industrial process instruments.",
+    "desc_th": "บริการสอบเทียบเครื่องมือวัดในกระบวนการผลิตหน้างาน",
+    "icon": "HardHat",
+    "href": "/certified/field-instrument"
+  },
+  {
+    "id": "temp-mapping",
+    "name_en": "Temperature Mapping",
+    "name_th": "การวัดการกระจายอุณหภูมิ",
+    "desc_en": "Mapping for warehouses, cold storage, and logistics.",
+    "desc_th": "บริการ Mapping อุณหภูมิและความชื้นสำหรับคลังสินค้า/ห้องเย็น",
+    "icon": "Map",
+    "href": "/certified/temp-mapping"
+  },
+  {
+    "id": "validation",
+    "name_en": "IQ, OQ, PQ and DQ",
+    "name_th": "การตรวจสอบและรับรองผล",
+    "desc_en": "Validation services for equipment and machinery.",
+    "desc_th": "บริการตรวจสอบความถูกต้องของเครื่องจักรและระบบ (Validation)",
+    "icon": "FileCheck",
+    "href": "/certified/validation"
+  }
+]

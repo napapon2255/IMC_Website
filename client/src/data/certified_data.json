@@ -1,42 +1,66 @@
 [
   {
     "id": "electrical",
-    "name": "Electrical",
+    "name_en": "Electrical",
+    "name_th": "เครื่องมือวัดทางไฟฟ้า",
+    "desc_en": "Calibration services for multimeter, clamp meter, insulation tester, and other electrical instruments.",
+    "desc_th": "บริการสอบเทียบมัลติมิเตอร์ แคลมป์มิเตอร์ เครื่องวัดฉนวน และเครื่องมือวัดทางไฟฟ้าทุกชนิด",
     "href": "/certified/electrical"
   },
   {
     "id": "optical-chemical",
-    "name": "Optical & Chemical",
+    "name_en": "Optical & Chemical",
+    "name_th": "เครื่องมือวัดทางทัศนศาสตร์และเคมี",
+    "desc_en": "Precision calibration for pH meters, conductivity meters, spectrophotometers, and optical devices.",
+    "desc_th": "บริการสอบเทียบเครื่องวัดค่า pH, ค่าการนำไฟฟ้า, เครื่องวัดสี และเครื่องมือทางเคมี",
     "href": "/certified/optical-chemical"
   },
   {
     "id": "medical-device",
-    "name": "Medical Device",
+    "name_en": "Medical Device",
+    "name_th": "เครื่องมือทางการแพทย์",
+    "desc_en": "Standardized calibration for patient monitors, blood pressure monitors, and medical equipment.",
+    "desc_th": "บริการสอบเทียบเครื่องมือแพทย์ เครื่องวัดความดันโลหิต เครื่องติดตามสัญญาณชีพ ตามมาตรฐานสากล",
     "href": "/certified/medical-device"
   },
   {
     "id": "temp-humidity",
-    "name": "Temperature & Humidity",
+    "name_en": "Temperature & Humidity",
+    "name_th": "อุณหภูมิและความชื้น",
+    "desc_en": "Calibration for thermometers, hygrometers, data loggers, and environmental chambers.",
+    "desc_th": "บริการสอบเทียบเทอร์โมมิเตอร์ เครื่องวัดความชื้น ตู้ควบคุมอุณหภูมิ และ Data logger",
     "href": "/certified/temp-humidity"
   },
   {
     "id": "torque-force",
-    "name": "Torque & Force",
+    "name_en": "Torque & Force",
+    "name_th": "แรงบิดและแรง",
+    "desc_en": "Calibration services for torque wrenches, force gauges, and tension meters.",
+    "desc_th": "บริการสอบเทียบประแจปอนด์ เครื่องวัดแรงดึง-แรงกด และเครื่องมือวัดแรงบิด",
     "href": "/certified/torque-force"
   },
   {
     "id": "temp-mapping",
-    "name": "Temperature & Humidity Mapping",
+    "name_en": "Temperature & Humidity Mapping",
+    "name_th": "การวัดการกระจายอุณหภูมิและความชื้น",
+    "desc_en": "Temperature mapping services for warehouses, cold rooms, and storage facilities.",
+    "desc_th": "บริการทำ Temperature Mapping สำหรับคลังสินค้า ห้องเย็น และรถขนส่งสินค้า",
     "href": "/certified/temp-mapping"
   },
   {
     "id": "dimension",
-    "name": "Dimension",
+    "name_en": "Dimension",
+    "name_th": "เครื่องมือวัดละเอียด (มิติ)",
+    "desc_en": "Calibration for vernier calipers, micrometers, dial gauges, and precision tools.",
+    "desc_th": "บริการสอบเทียบเวอร์เนียคาลิปเปอร์ ไมโครมิเตอร์ ไดอัลเกจ และเครื่องมือวัดขนาด",
     "href": "/certified/dimension"
   },
   {
     "id": "pressure-vacuum",
-    "name": "Pressure & Vacuum",
+    "name_en": "Pressure & Vacuum",
+    "name_th": "ความดันและสุญญากาศ",
+    "desc_en": "Calibration services for pressure gauges, vacuum gauges, and manometers.",
+    "desc_th": "บริการสอบเทียบเกจวัดแรงดัน เกจวัดสุญญากาศ และเครื่องมือวัดความดัน",
     "href": "/certified/pressure-vacuum"
   }
 ]
