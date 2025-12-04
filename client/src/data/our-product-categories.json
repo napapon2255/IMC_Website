@@ -1,62 +1,86 @@
 [
   {
-    "title": "เครื่องมือสอบเทียบมาตรฐาน / Calibrator",
-    "items": "Pressure calibrator, Hand pump, Dry block calibrator, Micro-bath, Multifunction process calibrator, Temperature calibrator, Three-phase meter calibrator",
+    "title_en": "Calibrator",
+    "title_th": "เครื่องมือสอบเทียบมาตรฐาน",
+    "items_en": "Pressure calibrator, Hand pump, Dry block calibrator, Micro-bath, Multifunction process calibrator, Temperature calibrator, Three-phase meter calibrator",
+    "items_th": "Pressure calibrator, Hand pump, Dry block calibrator, Micro-bath, เครื่องสอบเทียบกระบวนการ, เครื่องสอบเทียบอุณหภูมิ, เครื่องสอบเทียบไฟฟ้า 3 เฟส",
     "icon": "Settings2"
   },
   {
-    "title": "เฟอร์นิเจอร์ห้องปฏิบัติการ / Laboratory Design",
-    "items": "โต๊ะทำงานกลาง, โต๊ะทำงานติดผนัง, โต๊ะวางเครื่องมือ, ชั้นวางอุปกรณ์, ตู้เก็บสารเคมี, ตู้ดูดควัน (Fume hood), Laminar flow, เก้าอี้ห้องปฏิบัติการ Cleanroom",
+    "title_en": "Laboratory Design",
+    "title_th": "เฟอร์นิเจอร์ห้องปฏิบัติการ",
+    "items_en": "Center bench, Wall bench, Instrument table, Shelving unit, Chemical cabinet, Fume hood, Laminar flow, Cleanroom chair",
+    "items_th": "โต๊ะทำงานกลาง, โต๊ะทำงานติดผนัง, โต๊ะวางเครื่องมือ, ชั้นวางอุปกรณ์, ตู้เก็บสารเคมี, ตู้ดูดควัน (Fume hood), Laminar flow, เก้าอี้ห้องปฏิบัติการ Cleanroom",
     "icon": "Armchair"
   },
   {
-    "title": "เครื่องมือด้านวิเคราะห์ / Analytical",
-    "items": "pH/Conduc/TDS/ORP Meter, ไตเตรต, ตู้บ่มเชื้อ, ตู้ทำความเย็น, ตู้ควบคุมอุณหภูมิ, เตาเผา, Incubator, Freezer, Water bath, Autoclave, Viscometer, Centrifuge",
+    "title_en": "Analytical Equipment",
+    "title_th": "เครื่องมือด้านวิเคราะห์",
+    "items_en": "pH/Conduc/TDS/ORP Meter, Titrator, Incubator, Freezer, Oven, Furnace, Water bath, Autoclave, Viscometer, Centrifuge",
+    "items_th": "pH/Conduc/TDS/ORP Meter, ไตเตรต, ตู้บ่มเชื้อ, ตู้ทำความเย็น, ตู้ควบคุมอุณหภูมิ, เตาเผา, Incubator, Freezer, Water bath, Autoclave, Viscometer, Centrifuge",
     "icon": "FlaskConical"
   },
   {
-    "title": "เครื่องมือด้านสิ่งแวดล้อม / Environment",
-    "items": "เครื่องวัดเสียง, เครื่องวัดแสง, เครื่องวัดแรงสั่นสะเทือน, เครื่องวัดลม, Anemo meter, Lux & UV meter, Vibration meter, Data logger, Thermo-hygro meter, Sound level meter",
+    "title_en": "Environment Equipment",
+    "title_th": "เครื่องมือด้านสิ่งแวดล้อม",
+    "items_en": "Anemometer, Lux & UV meter, Vibration meter, Data logger, Thermo-hygro meter, Sound level meter, Dust monitor",
+    "items_th": "เครื่องวัดเสียง, เครื่องวัดแสง, เครื่องวัดแรงสั่นสะเทือน, เครื่องวัดลม, Anemo meter, Lux & UV meter, Vibration meter, Data logger, Thermo-hygro meter",
     "icon": "Wind"
   },
   {
-    "title": "เครื่องมือด้านทดสอบ / Testing",
-    "items": "เครื่องวัดแรงดึง-แรงกด, เครื่องชั่ง, เครื่องวัดความแข็ง, เครื่องวัดแรงบิด, Torque tester, Hardness tester, Force gauge, Roughness tester, Gloss meter, Universal testing machine",
+    "title_en": "Testing Equipment",
+    "title_th": "เครื่องมือด้านทดสอบ",
+    "items_en": "Torque tester, Hardness tester, Force gauge, Roughness tester, Gloss meter, Universal testing machine (UTM)",
+    "items_th": "เครื่องวัดแรงดึง-แรงกด, เครื่องชั่ง, เครื่องวัดความแข็ง, เครื่องวัดแรงบิด, Torque tester, Hardness tester, Force gauge, Roughness tester, Gloss meter",
     "icon": "ClipboardCheck"
   },
   {
-    "title": "เครื่องมือด้านมิติ / Dimension",
-    "items": "เวอร์เนียคาลิปเปอร์, ไมโครมิเตอร์, ไดอัลเกจ, ไมโครสโคป, โต๊ะแกรนิต, เครื่องวัดระดับ, Vernier caliper, Level meter, Gauge block, Profile projector, Microscope",
+    "title_en": "Dimension Equipment",
+    "title_th": "เครื่องมือด้านมิติ",
+    "items_en": "Vernier caliper, Micrometer, Dial gauge, Microscope, Granite surface plate, Level meter, Gauge block, Profile projector",
+    "items_th": "เวอร์เนียคาลิปเปอร์, ไมโครมิเตอร์, ไดอัลเกจ, ไมโครสโคป, โต๊ะแกรนิต, เครื่องวัดระดับ, Vernier caliper, Level meter, Gauge block, Profile projector",
     "icon": "Ruler"
   },
   {
-    "title": "เครื่องมือด้านไฟฟ้า / Electrical",
-    "items": "มัลติมิเตอร์, แคลมป์มิเตอร์, เครื่องวัดฉนวน, เครื่องวัดกราวด์, Multimeter, Clamp, Tachometer, Oscilloscope, Earth tester, LCR meter, Power Supply, Insulation tester",
+    "title_en": "Electrical Equipment",
+    "title_th": "เครื่องมือด้านไฟฟ้า",
+    "items_en": "Multimeter, Clamp meter, Insulation tester, Earth tester, Oscilloscope, LCR meter, Power Supply, Frequency counter",
+    "items_th": "มัลติมิเตอร์, แคลมป์มิเตอร์, เครื่องวัดฉนวน, เครื่องวัดกราวด์, Multimeter, Clamp, Tachometer, Oscilloscope, Earth tester, LCR meter, Power Supply",
     "icon": "Zap"
   },
   {
-    "title": "เครื่องมือด้านอุณหภูมิ / Temperature",
-    "items": "โพรบวัดอุณหภูมิ, เทอร์โมคัปเปิล, เครื่องบันทึกอุณหภูมิ, Thermometer, Temp controller, RTD Probe PT 100, Infrared thermometer, Temp gauge, Temp transmitter",
+    "title_en": "Temperature Equipment",
+    "title_th": "เครื่องมือด้านอุณหภูมิ",
+    "items_en": "Thermometer, Thermocouple, RTD Probe PT 100, Infrared thermometer, Temperature controller, Temperature transmitter",
+    "items_th": "โพรบวัดอุณหภูมิ, เทอร์โมคัปเปิล, เครื่องบันทึกอุณหภูมิ, Thermometer, Temp controller, RTD Probe PT 100, Infrared thermometer, Temp gauge",
     "icon": "Thermometer"
   },
   {
-    "title": "เครื่องมือด้านความดัน / Pressure",
-    "items": "เครื่องวัดความดัน, สวิทซ์ความดัน, เกจวัดความดันและสุญญากาศ, Pressure gauge, Pressure sensor, Pressure transmitter, Barometer, Vacuum gauge",
+    "title_en": "Pressure Equipment",
+    "title_th": "เครื่องมือด้านความดัน",
+    "items_en": "Pressure gauge, Pressure sensor, Pressure transmitter, Barometer, Vacuum gauge, Differential pressure gauge",
+    "items_th": "เครื่องวัดความดัน, สวิทซ์ความดัน, เกจวัดความดันและสุญญากาศ, Pressure gauge, Pressure sensor, Pressure transmitter, Barometer, Vacuum gauge",
     "icon": "Gauge"
   },
   {
-    "title": "เครื่องมือด้านอัตราการไหล / Flow meter",
-    "items": "เครื่องวัดอัตราการไหล น้ำ/อากาศ/ก๊าซ/น้ำมัน, Liquid flow meter, Gas flow meter, Oil flow meter, Mass flow meter, Thermal flow, Ultrasonic level",
+    "title_en": "Flow Meter",
+    "title_th": "เครื่องมือด้านอัตราการไหล",
+    "items_en": "Liquid flow meter, Gas flow meter, Oil flow meter, Mass flow meter, Thermal flow, Ultrasonic flow meter",
+    "items_th": "เครื่องวัดอัตราการไหล น้ำ/อากาศ/ก๊าซ/น้ำมัน, Liquid flow meter, Gas flow meter, Oil flow meter, Mass flow meter, Thermal flow, Ultrasonic level",
     "icon": "Waves"
   },
   {
-    "title": "เครื่องมือด้านโหลดเซลล์ / Load cell",
-    "items": "โหลดเซลล์ทุกชนิด, หน้าจออ่านค่า, เครื่องชั่งแบบแขวน, เครื่องวัดแรง, กล่องรวมสัญญาณโหลดเซลล์, Load cell indicator, Junction Box, Weighing module, Force sensor",
+    "title_en": "Load Cell",
+    "title_th": "เครื่องมือด้านโหลดเซลล์",
+    "items_en": "Load cell, Load cell indicator, Junction Box, Weighing module, Force sensor, Crane scale",
+    "items_th": "โหลดเซลล์ทุกชนิด, หน้าจออ่านค่า, เครื่องชั่งแบบแขวน, เครื่องวัดแรง, กล่องรวมสัญญาณโหลดเซลล์, Load cell indicator, Junction Box, Weighing module",
     "icon": "Weight"
   },
   {
-    "title": "เครื่องมือวัดแก๊ส / Gas Detector",
-    "items": "เครื่องวัดแก๊ส, หน้าจออ่านค่าแก๊ส, แก๊สเซนเซอร์, ชุดปรับแก๊สอัตโนมัติ, Portable gas detector, Fixed gas, Gas monitoring, Gas analyzers, Calibration gas set",
+    "title_en": "Gas Detector",
+    "title_th": "เครื่องมือวัดแก๊ส",
+    "items_en": "Portable gas detector, Fixed gas detector, Gas monitoring system, Gas analyzer, Calibration gas",
+    "items_th": "เครื่องวัดแก๊ส, หน้าจออ่านค่าแก๊ส, แก๊สเซนเซอร์, ชุดปรับแก๊สอัตโนมัติ, Portable gas detector, Fixed gas, Gas monitoring, Gas analyzers",
     "icon": "Siren"
   }
 ]

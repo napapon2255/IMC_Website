@@ -1,0 +1,50 @@
+[
+  {
+    "id": "iso-17025",
+    "title_en": "ISO/IEC 17025:2017 Requirement",
+    "title_th": "ข้อกำหนดมาตรฐาน ISO/IEC 17025:2017",
+    "desc_en": "Understanding the general requirements for the competence of testing and calibration laboratories.",
+    "desc_th": "หลักสูตรความเข้าใจข้อกำหนดทั่วไปสำหรับความสามารถของห้องปฏิบัติการสอบเทียบและทดสอบ",
+    "icon": "BookOpen"
+  },
+  {
+    "id": "uncertainty",
+    "title_en": "Measurement Uncertainty",
+    "title_th": "การประเมินค่าความไม่แน่นอนในการวัด",
+    "desc_en": "Guide to the expression of uncertainty in measurement for calibration labs.",
+    "desc_th": "หลักการและเทคนิคการประเมินค่าความไม่แน่นอนในการวัดสำหรับห้องปฏิบัติการ",
+    "icon": "Calculator"
+  },
+  {
+    "id": "internal-audit",
+    "title_en": "Internal Audit for Laboratory",
+    "title_th": "การตรวจติดตามคุณภาพภายในห้องปฏิบัติการ",
+    "desc_en": "Techniques and guidelines for conducting effective internal audits.",
+    "desc_th": "เทคนิคและแนวทางการตรวจติดตามคุณภาพภายในตามมาตรฐานสากล",
+    "icon": "ClipboardList"
+  },
+  {
+    "id": "method-validation",
+    "title_en": "Method Validation & Verification",
+    "title_th": "การตรวจสอบความถูกต้องของวิธี",
+    "desc_en": "Validation and verification of test and calibration methods.",
+    "desc_th": "หลักการตรวจสอบความสมเหตุสมผลและความทวนสอบของวิธีทดสอบ/สอบเทียบ",
+    "icon": "FlaskConical"
+  },
+  {
+    "id": "consult-setup",
+    "title_en": "Lab Setup Consultation",
+    "title_th": "ที่ปรึกษาจัดตั้งห้องปฏิบัติการ",
+    "desc_en": "Expert consultation for setting up new calibration laboratories.",
+    "desc_th": "บริการให้คำปรึกษาในการจัดตั้ง วางผัง และเตรียมความพร้อมห้องปฏิบัติการใหม่",
+    "icon": "Briefcase"
+  },
+  {
+    "id": "pre-assessment",
+    "title_en": "Pre-assessment for Accreditation",
+    "title_th": "เตรียมความพร้อมก่อนขอการรับรอง",
+    "desc_en": "Mock audit and preparation before the actual accreditation assessment.",
+    "desc_th": "บริการตรวจประเมินเบื้องต้นและเตรียมความพร้อมก่อนยื่นขอการรับรองจริง",
+    "icon": "Award"
+  }
+]
