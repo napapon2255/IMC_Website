@@ -1,0 +1,81 @@
+{
+  "intro": {
+    "title_th": "Automation control",
+    "title_en": "Automation control",
+    "description_th": "รับผลิต และออกแบบงานด้าน Automation, Program PLC, Scada, HMI, Machine design, ตู้ Control ระบบการผลิตอัตโนมัติ ติดตั้งระบบควบคุมไฟฟ้าในโรงงานอุตสาหกรรม รับออกแบบ และดัดแปลง เครื่องจักรที่เป็น Manual ให้เป็นระบบ Automatic, วางระบบ Power, COD, BOD Online, Monitoring system Wireless instrument calibration/service, Jig fixture",
+    "description_en": "We provide manufacturing and design services for Automation, PLC Programming, SCADA, HMI, Machine design, Control cabinets, and automatic production systems. We install electrical control systems in industrial factories, design and modify Manual machines to Automatic systems, set up Power, COD, BOD Online, Monitoring systems, Wireless instrument calibration/service, and Jig fixtures."
+  },
+  "projects": [
+    {
+      "id": "design-auto",
+      "title_th": "Design Machine Automation Control",
+      "title_en": "Design Machine Automation Control",
+      "desc_th": "รับออกแบบเครื่องจักรตามการใช้งานระบบ Manual และ Automatic โดยสามารถเพิ่มระบบตรวจสอบ (QC) และบันทึกผลการทำงานแบบอัตโนมัติ",
+      "desc_en": "Design machines for Manual and Automatic usage, with capabilities to add QC inspection systems and automatic operation recording.",
+      "reference_th": "ผลงาน : เครื่องประกอบกระสุนปืนขนาด .38, .45, 9 mm. (กองทัพเรือ)",
+      "reference_en": "Reference : Bullet assembling machine .38, .45, 9 mm. (Royal Thai Navy)",
+      "image": "Ammo-Load.jpg",
+      "has_youtube": true
+    },
+    {
+      "id": "renovate-autoclave",
+      "title_th": "Renovate Autoclave and Oven PLC Control",
+      "title_en": "Renovate Autoclave and Oven PLC Control",
+      "desc_th": "รับปรับปรุงเครื่องจักรจากระบบ Manual เป็น Automatic โดยสามารถ บันทึกผลได้ และเพิ่มระบบ Safety ในระบบการทำงานของเครื่อง",
+      "desc_en": "Renovate machines from Manual to Automatic systems, enabling data recording and adding Safety systems to the machine operation.",
+      "reference_th": "ผลงาน : ปรับปรุงตู้ฆ่าเชื้อ Autoclave (รพ.พญาไท และ รพ.กรุงเทพ )",
+      "reference_en": "Reference : Autoclave renovation (Phyathai Hospital and Bangkok Hospital)",
+      "image": "Renovate-Autoclave.jpg",
+      "has_pdf": true
+    },
+    {
+      "id": "renovate-machine",
+      "title_th": "Renovate Machine PLC Control",
+      "title_en": "Renovate Machine PLC Control",
+      "desc_th": "รับปรับปรุงเครื่องจักรจากระบบ Manual เป็น Automatic โดยสามารถ บันทึกผลได้ และเพิ่มระบบ Safety ในระบบการทำงานของเครื่อง",
+      "desc_en": "Renovate machines from Manual to Automatic systems, enabling data recording and adding Safety systems to the machine operation.",
+      "reference_th": "ผลงาน : ปรับปรุงเครื่องประกอบกระสุนปืนขนาด .38 mm. (กองทัพเรือ)",
+      "reference_en": "Reference : Renovation of .38 mm bullet assembling machine. (Royal Thai Navy)",
+      "image": "Ammo-Load-Renovate.jpg"
+    },
+    {
+      "id": "pm-machine",
+      "title_th": "P.M. Machine : Preventive maintenance",
+      "title_en": "P.M. Machine : Preventive maintenance",
+      "desc_th": "ซ่อมบำรุงเครื่องจักร ระบบเครื่องกล ระบบไฟฟ้า และทดสอบค่าการใช้งาน พร้อมใบรับรองผล (Certificate) เพื่อให้เครื่องจักรสามารถทำงานได้ตลอด",
+      "desc_en": "Maintenance of mechanical and electrical systems, functionality testing with Certificate to ensure continuous machine operation.",
+      "reference_th": "ผลงาน : เครื่องดึงหัวกระสุนปืนขนาดกลาง แบบอัตโนมัติ (กองทัพเรือ)",
+      "reference_en": "Reference : Automatic medium-sized bullet pulling machine. (Royal Thai Navy)",
+      "image": "Test-load-Ammo.jpg"
+    },
+    {
+      "id": "software-mgmt",
+      "title_th": "Software Management Design & Development",
+      "title_en": "Software Management Design & Development",
+      "desc_th": "ออกแบบซอฟต์แวร์การจัดการข้อมูล เก็บเป็นทึก และสามารถเรียกดูข้อมูลขั้นตอน การรับ-ส่ง-ติดตาม และตรวจสอบได้ โดยระบบ Lan หรือ Online Internet",
+      "desc_en": "Design software for data management and recording. Allows viewing of Receive-Send-Track and Verify steps via LAN or Online Internet.",
+      "reference_th": "ผลงาน : Software Instrument management system (CP Meiji, Bridgestone)",
+      "reference_en": "Reference : Software Instrument management system (CP Meiji, Bridgestone)",
+      "image": "soft-003.jpg"
+    }
+  ],
+  "wireless": {
+    "title_th": "ระบบแสดงค่าอุณหภูมิ และความชื้นแบบไร้สาย (Wireless Temperature-Humidity Monitoring)",
+    "title_en": "Wireless Temperature-Humidity Monitoring System",
+    "features_th": [
+      "แสดงค่าอุณหภูมิ หรือความชื้นสัมพัทธ์ แบบไร้สาย",
+      "สามารถตั้ง Alarm ของค่าอุณหภูมิที่ต้องการวัด",
+      "สามารถรายงานผลผ่าน Computer และ ระบบโทรศัพท์มือถือได้",
+      "เก็บข้อมูลได้แบบ Data logger",
+      "เหมาะสำหรับห้องที่ต้องการควบคุมอุณหภูมิตลอดเวลา"
+    ],
+    "features_en": [
+      "Wirelessly display Temperature or Relative Humidity.",
+      "Set Alarms for target temperature values.",
+      "Report results via Computer and Mobile Phone systems.",
+      "Store data as a Data logger.",
+      "Suitable for rooms requiring constant temperature control."
+    ],
+    "image": "Wireless-temp-humid.jpg"
+  }
+}

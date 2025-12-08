@@ -14,6 +14,9 @@ import OurProductsPage from "./pages/OurProductsPage";
 import CertifiedDetail from "./pages/CertifiedDetail";
 import CalibrationTesting from "./pages/CalibrationTesting";
 import TrainingConsultant from "./pages/TrainingConsultant";
+import SoftwareManagement from "./pages/SoftwareManagement";
+import AutomationControl from "./pages/RenovateService";
+import RepairInspection from "./pages/RepairInspection";
 
 
 function Router() {
@@ -28,6 +31,9 @@ function Router() {
           <Route path="/products/our-products" component={OurProductsPage} />   
           <Route path="/products/calibration-testing" component={CalibrationTesting} />
           <Route path="/products/training-consultant" component={TrainingConsultant} />
+          <Route path="/products/software-management" component={SoftwareManagement} />
+          <Route path="/products/automation-control" component={AutomationControl} />
+          <Route path="/products/repair-inspection" component={RepairInspection} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

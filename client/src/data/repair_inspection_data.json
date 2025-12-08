@@ -1,0 +1,80 @@
+{
+  "header": {
+    "title_th": "ศูนย์ซ่อมและสอบเทียบเครื่องมือ",
+    "title_en": "Repair & Inspection Instrument Center",
+    "subtitle_th": "บริการซ่อมแซมและสอบเทียบเครื่องมือวัด",
+    "subtitle_en": "Repair and Calibration Services for Measuring Instruments"
+  },
+  "intro": {
+    "description_th": "บริการบำรุงรักษา ตรวจเช็ค และซ่อมเครื่องมือวัด เช่น เครื่องมือสอบเทียบ, เครื่องมือทดสอบ, และระบบอัตโนมัติต่างๆ โดยทีมวิศวกรผู้เชี่ยวชาญ ให้บริการทั้งงานในโรงงานและหน้างาน พร้อมเอกสารรับรองผลการตรวจสอบ",
+    "description_en": "We provide maintenance, inspection, and repair services for measuring instruments, calibration tools, testing equipment, and various automation systems. Our team of expert engineers offers both on-site and on-premises services with certified inspection reports."
+  },
+  "services": [
+    {
+      "id": "general-repair",
+      "title_th": "การซ่อมแซมทั่วไป และ Preventive Maintenance",
+      "title_en": "General Repair & Preventive Maintenance",
+      "description_th": "บริการบำรุงรักษาตามรอบและซ่อมแซมเครื่องมือวัดต่างๆ",
+      "description_en": "Regular maintenance and repair of measuring instruments"
+    },
+    {
+      "id": "calibration",
+      "title_th": "การสอบเทียบเครื่องมือวัดตามมาตรฐาน",
+      "title_en": "Calibration of Measuring Instruments per Standards",
+      "description_th": "สอบเทียบตามมาตรฐานสากล พร้อมเอกสารรับรอง",
+      "description_en": "International standard calibration with certification"
+    },
+    {
+      "id": "retrofit",
+      "title_th": "ออกแบบและปรับปรุงระบบอัตโนมัติ (Retrofit)",
+      "title_en": "Automation System Design & Retrofit",
+      "description_th": "ปรับปรุงระบบจากแบบ Manual เป็น Automatic พร้อมระบบความปลอดภัย",
+      "description_en": "Upgrade systems from Manual to Automatic with safety integration"
+    },
+    {
+      "id": "plc-control",
+      "title_th": "ติดตั้งและให้คำปรึกษาเรื่องระบบควบคุม PLC",
+      "title_en": "PLC Control System Installation & Consultation",
+      "description_th": "ติดตั้งและจัดการระบบควบคุม PLC เช่น Siemens, Mitsubishi",
+      "description_en": "PLC system installation and management (Siemens, Mitsubishi, etc.)"
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-1",
+      "title_th": "Renovate Autoclave",
+      "title_en": "Renovate Autoclave",
+      "description_th": "ปรับปรุงระบบควบคุม, เพิ่มระบบความปลอดภัย",
+      "description_en": "System control upgrade and safety system enhancement",
+      "image": "Renovate-Autoclave.jpg"
+    },
+    {
+      "id": "project-2",
+      "title_th": "Preventive Maintenance",
+      "title_en": "Preventive Maintenance",
+      "description_th": "บริการบำรุงรักษาตามรอบ พร้อมรายงาน",
+      "description_en": "Regular maintenance service with detailed reporting",
+      "image": "Test-load-Ammo.jpg"
+    }
+  ],
+  "sidebar_services": [
+    "Calibration & Certification",
+    "Repair & Retrofit",
+    "Design Machine Automation",
+    "Software Management"
+  ],
+  "sidebar_services_th": [
+    "การสอบเทียบและการรับรอง",
+    "ซ่อมแซมและปรับปรุงระบบ",
+    "ออกแบบการอัตโนมัติของเครื่องจักร",
+    "การจัดการซอฟต์แวร์"
+  ],
+  "download": {
+    "title_th": "ดาวน์โหลด",
+    "title_en": "Download",
+    "description_th": "เอกสารข้อมูลผลิตภัณฑ์และบริการ (PDF)",
+    "description_en": "Product and service documentation (PDF)",
+    "button_th": "ดาวน์โหลด",
+    "button_en": "Download"
+  }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "SOFT-001",
+    "name_th": "Software การจัดการเครื่องมือวัด",
+    "name_en": "Instrument Management Software",
+    "price": "65,000 THB",
+    "image": "soft-001.jpg",
+    "features_th": [
+      "เรียกดูข้อมูล และประวัติการสอบเทียบของเครื่องมือวัดโดยแบ่งได้ตาม แผนก, ประเภท, ID.No., S/N หรือตามเครื่องจักร",
+      "จัดการ Due date ของเครื่องมือโดย Pop-up การแจ้งเตือนล่วงหน้า สามารถตั้งเวลาล่วงหน้าได้เองพร้อมส่ง Mail ไปฝ่ายอื่น",
+      "จัดการเรื่อง Action plan ได้"
+    ],
+    "features_en": [
+      "View instrument data and calibration history categorized by Department, Type, ID No., S/N, or Machine.",
+      "Manage Due dates with Pop-up alerts and automated Email notifications to relevant departments.",
+      "Manage Action plans effectively."
+    ]
+  },
+  {
+    "id": "SOFT-002",
+    "name_th": "Automatic data links system (Software บันทึกค่าหน้าจอเครื่องมือวัด)",
+    "name_en": "Automatic Data Links System",
+    "price": "150,000 THB",
+    "image": "soft-002.jpg",
+    "features_th": [
+      "ต่อเชื่อมสัญญาณจากเครื่องมือวัดไปที่ Computer และเก็บข้อมูลแบบอัตโนมัติ โดยไม่ต้องจดบันทึกใน Test report",
+      "แปลงสัญญาณจากหน้าจอ Digital ของเครื่องมือวัดทุกชนิดไปยัง Computer แบบอัตโนมัติ (Image Processing)",
+      "สามารถดูข้อมูล Test report, X-bar, R-chart, GR&R, FMEA, MSA, SPC, PPAP โดยอัตโนมัติ"
+    ],
+    "features_en": [
+      "Automatically connect and record data from instruments to Computer without manual entry in Test reports.",
+      "Convert signals from Digital screens of any instrument to Computer automatically (Image Processing).",
+      "Automatically generate and view Test report, X-bar, R-chart, GR&R, FMEA, MSA, SPC, PPAP."
+    ]
+  },
+  {
+    "id": "SOFT-003",
+    "name_th": "Software การสอบเทียบเครื่องมือวัด (Calibration management)",
+    "name_en": "Calibration Management Software",
+    "price": "380,000 THB",
+    "image": "soft-003.jpg",
+    "description_file": "/files/soft-003-desc.pdf",
+    "features_th": [
+      "ข้อมูลการสอบเทียบถูกต้องตามมาตรฐาน ISO/IEC 17025",
+      "รายงานค่า Error, Lower, Upper, Accuracy, Tolerance, MPE, Correction และ Uncertainty แบบอัตโนมัติ",
+      "เก็บข้อมูลทั้งเครื่องมือวัด และ Standard ในการสอบเทียบ",
+      "มี Plan การ Validate และ Preventive maintenance",
+      "สามารถเลือกเซ็นชื่อ (Approved) แบบ On monitor ได้",
+      "สามารถเลือกระบบเป็น Lan หรือ Online internet ได้",
+      "เก็บข้อมูลเป็น File electronic ทั้งหมดสามารถเรียกดูข้อมูลบน Computer จึงลดการใช้กระดาษ",
+      "มีขั้นตอน รับ-ส่ง, ติดตาม-ตรวจสอบ ของการทำงาน",
+      "สามารถดูข้อมูล Certificate, Action plan, Month plan, Year plan, X-bar, R-chart ได้บน Computer",
+      "มีระบบ Software การจัดการเครื่องมือวัดแล้วทั้งหมด"
+    ],
+    "features_en": [
+      "Calibration data complies with ISO/IEC 17025 standards.",
+      "Automatically report Error, Lower, Upper, Accuracy, Tolerance, MPE, Correction, and Uncertainty.",
+      "Store data for both Instruments and Standards.",
+      "Includes Validation and Preventive maintenance plans.",
+      "Supports On-monitor approval (Digital Signature).",
+      "Available in LAN or Online Internet systems.",
+      "Paperless system: All data stored electronically and accessible via Computer.",
+      "Workflow tracking: Receive/Send, Monitor/Verify.",
+      "View Certificate, Action plan, Month/Year plan, X-bar, R-chart on Computer.",
+      "Includes full Instrument Management System features."
+    ]
+  }
+]

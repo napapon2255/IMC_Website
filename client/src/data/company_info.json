@@ -1,0 +1,28 @@
+{
+  "company_name": {
+    "th": "บริษัท อินซ์เทค เมโทรโลจิคอล เซ็นเตอร์ จำกัด",
+    "en": "Inctech Metrological Center Co.,Ltd."
+  },
+  "address": {
+    "th": "39/1 ถ.สุขาภิบาล 5, แขวงออเงิน, เขตสายไหม กรุงเทพฯ 10220",
+    "en": "39/1 Sukhapiban 5 Rd., Orngoen, Saimai, Bangkok 10220"
+  },
+  "phone": [
+    "02-909-8820 (Auto 10 Lines)"
+  ],
+  "fax": "02-909-8823",
+  "email": [
+    "imc@imcinstrument.com",
+    "sales@imc.co.th"
+  ],
+  "business_hours": {
+    "open": {
+      "th": "จันทร์ - ศุกร์: 8:30 น. - 17:30 น.",
+      "en": "Mon - Fri: 8:30 AM - 5:30 PM"
+    },
+    "closed": {
+      "th": "เสาร์ - อาทิตย์: ปิดทำการ",
+      "en": "Sat - Sun: Closed"
+    }
+  }
+}
