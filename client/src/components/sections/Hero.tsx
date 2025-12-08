@@ -8,6 +8,11 @@ export default function Hero() {
     if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToContract = () => {
+    const element = document.querySelector("#contact");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -40,7 +45,7 @@ export default function Hero() {
               <Button size="lg" className="text-base px-8 py-6 shadow-lg shadow-primary/25" onClick={scrollToProducts}>
                 Explore Our Services
               </Button>
-              <Button size="lg" variant="outline" className="text-base px-8 py-6 bg-transparent text-white border-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" className="text-base px-8 py-6 bg-transparent text-white border-white hover:bg-white hover:text-primary" onClick={scrollToContract}>
                 Contact Us
               </Button>
             </div>
