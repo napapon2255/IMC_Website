@@ -96,7 +96,7 @@ export default function OurProductsPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
-                        {/* 6. แยกรายการด้วย comma และแสดงผล */}
+                      
                         {displayItems.split(',').map((item, i) => (
                           <span key={i} className="inline-block bg-slate-100 rounded-sm px-2 py-0.5 mr-1 mb-1 text-xs text-slate-600">
                             {item.trim()}
