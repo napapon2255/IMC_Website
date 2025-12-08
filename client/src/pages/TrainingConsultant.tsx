@@ -154,50 +154,6 @@ export default function TrainingConsultant() {
         </div>
       </section>
 
-      {/* 3. Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-800 mb-2">
-              {t("บริการที่ปรึกษาและวางระบบ", "Consulting Services")}
-            </h2>
-            <div className="h-1 w-16 bg-primary mx-auto rounded-full"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trainingData.map((item, index) => {
-              const IconComponent = iconMap[item.icon] || Settings2;
-              const title = language === "TH" ? item.title_th : item.title_en;
-              const desc = language === "TH" ? item.desc_th : item.desc_en;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 border-slate-200 bg-white">
-                    <CardHeader>
-                      <div className="h-12 w-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
-                        <IconComponent className="h-6 w-6" />
-                      </div>
-                      <CardTitle className="text-xl font-bold">{title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground leading-relaxed mb-6">{desc}</p>
-                      <Button variant="outline" className="w-full group">
-                        {t("สอบถามรายละเอียด", "Inquire Now")} 
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* 4. Course List */}
       <section id="course-list-section" className="py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
