@@ -1,38 +1,176 @@
 [
   {
-    "title": "Our Products",
-    "slug": "our-products",
-    "icon": "Package",
-    "description": "Explore our comprehensive range of high-quality equipment."
+    "id": 1,
+    "brand_id": "sika",
+    "category_id": 1,
+    "name_en": "Industrial Thermometer T-201",
+    "name_th": "เทอร์โมมิเตอร์อุตสาหกรรม T-201",
+    "description_en": "High precision industrial thermometer for process control applications. Range: -50°C to 500°C. Accuracy: ±0.5°C.",
+    "description_th": "เทอร์โมมิเตอร์อุตสาหกรรมความแม่นยำสูงสำหรับงานควบคุมกระบวนการ ช่วงวัด: -50°C ถึง 500°C ความแม่นยำ: ±0.5°C",
+    "image": "/uploads/products/thermometer-t201.jpg",
+    "price": "฿8,500"
   },
   {
-    "title": "Calibration and Testing Laboratory",
-    "slug": "calibration-testing",
-    "icon": "Scale",
-    "description": "ISO/IEC 17025 certified calibration and precise testing services."
+    "id": 3,
+    "brand_id": "sika",
+    "category_id": 1,
+    "name_en": "Digital Thermometer DT-500",
+    "name_th": "เทอร์โมมิเตอร์ดิจิตอล DT-500",
+    "description_en": "Portable digital thermometer with large LCD display. Battery operated with auto power-off feature.",
+    "description_th": "เทอร์โมมิเตอร์ดิจิตอลพกพาจอ LCD ขนาดใหญ่ ใช้แบตเตอรี่พร้อมฟังก์ชันปิดอัตโนมัติ",
+    "image": "/uploads/products/dt-500.jpg",
+    "price": "฿3,200"
   },
   {
-    "title": "Training & Consultant Academy",
-    "slug": "training-consultant",
-    "icon": "GraduationCap",
-    "description": "Professional training courses and expert consultation services."
+    "id": 4,
+    "brand_id": "sika",
+    "category_id": 2,
+    "name_en": "Temperature Calibrator TC-100",
+    "name_th": "เครื่องสอบเทียบอุณหภูมิ TC-100",
+    "description_en": "Portable dry block temperature calibrator. Range: -25°C to 150°C. Stability: ±0.02°C.",
+    "description_th": "เครื่องสอบเทียบอุณหภูมิแบบ Dry Block พกพา ช่วง: -25°C ถึง 150°C ความเสถียร: ±0.02°C",
+    "image": "/uploads/products/tc-100.jpg",
+    "price": "฿45,000"
   },
   {
-    "title": "Software Management",
-    "slug": "software-management",
-    "icon": "Monitor",
-    "description": "Advanced software solutions for data and system management."
+    "id": 5,
+    "brand_id": "sika",
+    "category_id": 2,
+    "name_en": "Process Calibrator PC-200",
+    "name_th": "เครื่องสอบเทียบกระบวนการ PC-200",
+    "description_en": "Multi-function process calibrator for temperature, pressure, and electrical signals. HART compatible.",
+    "description_th": "เครื่องสอบเทียบกระบวนการแบบมัลติฟังก์ชันสำหรับอุณหภูมิ ความดัน และสัญญาณไฟฟ้า รองรับ HART",
+    "image": "/uploads/products/pc-200.jpg",
+    "price": "฿89,000"
   },
   {
-    "title": "Automation Control & Design",
-    "slug": "automation-control",
-    "icon": "Cpu",
-    "description": "Custom automation systems and control design for efficiency."
+    "id": 6,
+    "brand_id": "sika",
+    "category_id": 3,
+    "name_en": "Pressure Gauge PG-100",
+    "name_th": "เกจวัดความดัน PG-100",
+    "description_en": "Stainless steel pressure gauge with glycerin filling. Range: 0-100 bar. Accuracy class 1.0.",
+    "description_th": "เกจวัดความดันสแตนเลสบรรจุกลีเซอรีน ช่วง: 0-100 บาร์ ระดับความแม่นยำ 1.0",
+    "image": "/uploads/products/pg-100.jpg",
+    "price": "฿2,800"
   },
   {
-    "title": "Repair & Inspection",
-    "slug": "repair-inspection",
-    "icon": "Wrench",
-    "description": "Reliable repair, maintenance, and equipment inspection services."
+    "id": 7,
+    "brand_id": "sika",
+    "category_id": 3,
+    "name_en": "Digital Pressure Gauge DPG-500",
+    "name_th": "เกจวัดความดันดิจิตอล DPG-500",
+    "description_en": "High accuracy digital pressure gauge with data logging. IP67 rated. Accuracy: 0.1% FS.",
+    "description_th": "เกจวัดความดันดิจิตอลความแม่นยำสูงพร้อมบันทึกข้อมูล ระดับ IP67 ความแม่นยำ: 0.1% FS",
+    "image": "/uploads/products/dpg-500.jpg",
+    "price": "฿18,500"
+  },
+  {
+    "id": 8,
+    "brand_id": "datrend",
+    "category_id": 1,
+    "name_en": "vPad-Mini Electrical Safety Analyzer",
+    "name_th": "เครื่องวิเคราะห์ความปลอดภัยไฟฟ้า vPad-Mini",
+    "description_en": "Compact electrical safety analyzer for medical device testing. IEC 62353 compliant.",
+    "description_th": "เครื่องวิเคราะห์ความปลอดภัยไฟฟ้าขนาดกะทัดรัดสำหรับทดสอบอุปกรณ์การแพทย์ ตามมาตรฐาน IEC 62353",
+    "image": "/uploads/products/vpad-mini.jpg",
+    "price": "฿125,000"
+  },
+  {
+    "id": 9,
+    "brand_id": "datrend",
+    "category_id": 2,
+    "name_en": "ECG Simulator ES-100",
+    "name_th": "เครื่องจำลอง ECG ES-100",
+    "description_en": "12-lead ECG patient simulator with arrhythmia waveforms. Battery or AC powered.",
+    "description_th": "เครื่องจำลองผู้ป่วย ECG 12 ลีดพร้อมคลื่นหัวใจเต้นผิดจังหวะ ใช้แบตเตอรี่หรือไฟ AC",
+    "image": "/uploads/products/ecg-sim.jpg",
+    "price": "฿75,000"
+  },
+  {
+    "id": 10,
+    "brand_id": "datrend",
+    "category_id": 2,
+    "name_en": "SpO2 Simulator SPO-200",
+    "name_th": "เครื่องจำลอง SpO2 SPO-200",
+    "description_en": "Pulse oximeter tester with adjustable saturation levels 30-100%. Multi-brand finger adapter.",
+    "description_th": "เครื่องทดสอบ Pulse Oximeter ปรับระดับความอิ่มตัวได้ 30-100% อะแดปเตอร์หลายยี่ห้อ",
+    "image": "/uploads/products/spo2-sim.jpg",
+    "price": "฿55,000"
+  },
+  {
+    "id": 11,
+    "brand_id": "aep",
+    "category_id": 1,
+    "name_en": "Single Point Load Cell SP-1000",
+    "name_th": "โหลดเซลล์แบบจุดเดี่ยว SP-1000",
+    "description_en": "Aluminum single point load cell. Capacity: 10-200 kg. IP65 protection.",
+    "description_th": "โหลดเซลล์แบบจุดเดี่ยวอะลูมิเนียม ความจุ: 10-200 กก. ระดับป้องกัน IP65",
+    "image": "/uploads/products/loadcell-sp1000.jpg",
+    "price": "฿6,500"
+  },
+  {
+    "id": 12,
+    "brand_id": "aep",
+    "category_id": 1,
+    "name_en": "Shear Beam Load Cell SB-5000",
+    "name_th": "โหลดเซลล์แบบเฉือน SB-5000",
+    "description_en": "Stainless steel shear beam load cell. Capacity: 500-10000 kg. OIML R60 C3 approved.",
+    "description_th": "โหลดเซลล์แบบเฉือนสแตนเลส ความจุ: 500-10000 กก. ได้รับการรับรอง OIML R60 C3",
+    "image": "/uploads/products/loadcell-sb5000.jpg",
+    "price": "฿12,800"
+  },
+  {
+    "id": 13,
+    "brand_id": "imt",
+    "category_id": 1,
+    "name_en": "CITREX H3 Gas Flow Analyzer",
+    "name_th": "เครื่องวิเคราะห์การไหลของแก๊ส CITREX H3",
+    "description_en": "Entry-level gas flow analyzer for ventilator and anesthesia testing. Touchscreen interface.",
+    "description_th": "เครื่องวิเคราะห์การไหลของแก๊สสำหรับทดสอบเครื่องช่วยหายใจและดมยา จอสัมผัส",
+    "image": "/uploads/products/citrex-h3.jpg",
+    "price": "฿185,000"
+  },
+  {
+    "id": 14,
+    "brand_id": "imt",
+    "category_id": 2,
+    "name_en": "FlowMonitor Pro FM-300",
+    "name_th": "เครื่องวัดการไหล FlowMonitor Pro FM-300",
+    "description_en": "High precision gas flow meter. Range: 0-300 L/min. Accuracy: ±1% of reading.",
+    "description_th": "เครื่องวัดการไหลของแก๊สความแม่นยำสูง ช่วง: 0-300 L/min ความแม่นยำ: ±1% ของค่าที่อ่าน",
+    "image": "/uploads/products/flowmonitor-pro.jpg",
+    "price": "฿95,000"
+  },
+  {
+    "id": 15,
+    "brand_id": "foremount",
+    "category_id": 1,
+    "name_en": "Mercury Analyzer MA-3000",
+    "name_th": "เครื่องวิเคราะห์ปรอท MA-3000",
+    "description_en": "Direct thermal decomposition mercury analyzer. Detection limit: 0.001 ng Hg.",
+    "description_th": "เครื่องวิเคราะห์ปรอทแบบ Direct Thermal Decomposition ขีดจำกัดการตรวจจับ: 0.001 ng Hg",
+    "image": "/uploads/products/mercury-analyzer.jpg",
+    "price": "฿850,000"
+  },
+  {
+    "id": 16,
+    "name_en": "ndfsd",
+    "name_th": "กหดหกด",
+    "price": "asdasdas",
+    "image": "//",
+    "description_en": "asda",
+    "description_th": "asd",
+    "category_id": 1
+  },
+  {
+    "id": 17,
+    "name_en": "sdfsds",
+    "name_th": "dfs",
+    "price": "฿1254",
+    "description_en": "xzc",
+    "description_th": "zcx",
+    "category_id": 1,
+    "brand_id": "sika"
   }
 ]

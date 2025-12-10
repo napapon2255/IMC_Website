@@ -1,0 +1,58 @@
+[
+  {
+    "id": "sika",
+    "name": "SIKA",
+    "logo": "/images/logos/sika.png",
+    "cover_image": "/images/brand-covers/sika.png",
+    "description_th": "ผลิตภัณฑ์สิ่งก่อสร้างและสารซ่อม",
+    "description_en": "Construction products and repair materials"
+  },
+  {
+    "id": "datrend",
+    "name": "Datrend Systems Inc.",
+    "logo": "/images/logos/datrend.png",
+    "cover_image": "/images/brand-covers/datrend.png",
+    "description_th": "เครื่องมือสอบเทียบอุณหภูมิและการวัด",
+    "description_en": "Temperature calibrators and measurement instruments"
+  },
+  {
+    "id": "aep",
+    "name": "AEP transducers",
+    "logo": "/images/logos/aep.png",
+    "cover_image": "/images/brand-covers/aep.png",
+    "description_th": "เซนเซอร์และตัวแปลงสัญญาณความดันอุณหภูมิ",
+    "description_en": "Pressure and temperature sensors and transducers"
+  },
+  {
+    "id": "imt",
+    "name": "IMT Analytics",
+    "logo": "/images/logos/imt.png",
+    "cover_image": "/images/brand-covers/imt.png",
+    "description_th": "เครื่องมือวิเคราะห์ความชื้นและคุณภาพน้ำ",
+    "description_en": "Moisture analyzers and water quality instruments"
+  },
+  {
+    "id": "rigel",
+    "name": "Rigel Medical",
+    "logo": "/images/logos/rigel.png",
+    "cover_image": "/images/brand-covers/rigel.png",
+    "description_th": "อุปกรณ์ทดสอบและตรวจสอบทางการแพทย์",
+    "description_en": "Medical device testers and diagnostic instruments"
+  },
+  {
+    "id": "foremount",
+    "name": "Foremount",
+    "logo": "/images/logos/foremount.png",
+    "cover_image": "/images/brand-covers/foremount.png",
+    "description_th": "เครื่องชั่งและระบบวัดน้ำหนัก",
+    "description_en": "Scales and weighing systems"
+  },
+  {
+    "id": "bionit",
+    "name": "Bionit",
+    "logo": "/images/logos/bionit.png",
+    "cover_image": "/images/brand-covers/bionit.png",
+    "description_th": "เครื่องมือทางการแพทย์และอิเล็กทรอนิกส์",
+    "description_en": "Medical and electronic instruments"
+  }
+]

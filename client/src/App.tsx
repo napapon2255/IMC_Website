@@ -11,12 +11,16 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
 import OurProductsPage from "./pages/OurProductsPage";
+import BrandDetail from "./pages/BrandDetail";
+import CategoryDetail from "./pages/CategoryDetail";
+import ProductGroupDetail from "./pages/ProductGroupDetail";
 import CertifiedDetail from "./pages/CertifiedDetail";
 import CalibrationTesting from "./pages/CalibrationTesting";
 import TrainingConsultant from "./pages/TrainingConsultant";
 import SoftwareManagement from "./pages/SoftwareManagement";
 import AutomationControl from "./pages/RenovateService";
 import RepairInspection from "./pages/RepairInspection";
+import AdminDashboard from "./pages/AdminDashboard";
 
 
 function Router() {
@@ -27,8 +31,12 @@ function Router() {
         <ScrollToTop />
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/admin" component={AdminDashboard} />
+          <Route path="/brands/:brandId" component={BrandDetail} />
+          <Route path="/brands/:brandId/category/:categoryIndex" component={CategoryDetail} />
+          <Route path="/brands/:brandId/category/:categoryIndex/group/:groupIndex" component={ProductGroupDetail} />
           <Route path="/certified/:category" component={CertifiedDetail} />
-          <Route path="/products/our-products" component={OurProductsPage} />   
+          <Route path="/products/our-products" component={OurProductsPage} />
           <Route path="/products/calibration-testing" component={CalibrationTesting} />
           <Route path="/products/training-consultant" component={TrainingConsultant} />
           <Route path="/products/software-management" component={SoftwareManagement} />

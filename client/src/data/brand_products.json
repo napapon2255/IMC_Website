@@ -1,0 +1,199 @@
+{
+  "sika": {
+    "name": "SIKA",
+    "categories": [
+      {
+        "title_en": "Temperature",
+        "title_th": "อุณหภูมิ",
+        "items_en": "Industrial thermometers, KombiTemp®, Digital thermometers, Temperature sensors, Dial thermometers, Room condition monitoring, Temperature calibrators, Process calibrators, Hand-held instruments",
+        "items_th": "เทอร์โมมิเตอร์อุตสาหกรรม, KombiTemp®, เทอร์โมมิเตอร์ดิจิตอล, เซนเซอร์อุณหภูมิ, เทอร์โมมิเตอร์แบบหน้าปัด, ระบบตรวจสอบสภาพห้อง, เครื่องสอบเทียบอุณหภูมิ, เครื่องสอบเทียบกระบวนการ, เครื่องมือวัดแบบมือถือ"
+      },
+      {
+        "title_en": "Calibration Instruments",
+        "title_th": "เครื่องมือสอบเทียบ",
+        "items_en": "Temperature calibrators, Process calibrators, Test pumps, Oil deadweight testers, Recalibration sets",
+        "items_th": "เครื่องสอบเทียบอุณหภูมิ, เครื่องสอบเทียบกระบวนการ, เครื่องสูบทดสอบ, เครื่องทดสอบ Deadweight แบบน้ำมัน, ชุดสอบเทียบซ้ำ"
+      },
+      {
+        "title_en": "Pressure",
+        "title_th": "ความดัน",
+        "items_en": "Pressure gauges, Digital pressure gauges, Test pumps, Oil deadweight testers, Hand-held instruments",
+        "items_th": "เกจวัดความดัน, เกจวัดความดันดิจิตอล, เครื่องสูบทดสอบ, เครื่องทดสอบ Deadweight แบบน้ำมัน, เครื่องมือวัดแบบมือถือ"
+      },
+      {
+        "title_en": "Marine Market Products",
+        "title_th": "ผลิตภัณฑ์สำหรับตลาดทางทะเล",
+        "items_en": "Industrial thermometers, Dial thermometers, Digital thermometers, Temperature sensors, Room condition monitoring, Pressure gauges, Digital pressure gauges, Flow switches, Magnetic inductive flow sensors, Oval gear flow meters, Temperature calibrators, Test pumps, Recalibration sets",
+        "items_th": "เทอร์โมมิเตอร์อุตสาหกรรม, เทอร์โมมิเตอร์แบบหน้าปัด, เทอร์โมมิเตอร์ดิจิตอล, เซนเซอร์อุณหภูมิ, ระบบตรวจสอบสภาพห้อง, เกจวัดความดัน, เกจวัดความดันดิจิตอล, สวิตช์การไหล, เซนเซอร์การไหลแบบแม่เหล็กไฟฟ้า, เครื่องวัดการไหลแบบโอวัล, เครื่องสอบเทียบอุณหภูมิ, เครื่องสูบทดสอบ, ชุดสอบเทียบซ้ำ"
+      },
+      {
+        "title_en": "Level",
+        "title_th": "ระดับ",
+        "items_en": "Level switches",
+        "items_th": "สวิตช์ระดับ"
+      }
+    ]
+  },
+  "datrend": {
+    "name": "Datrend Systems Inc.",
+    "categories": [
+      {
+        "title_en": "Electrical Safety Analyzers",
+        "title_th": "เครื่องวิเคราะห์ความปลอดภัยไฟฟ้า",
+        "items_en": "vPad-Mini electrical safety analyzer, Insulation testers, Leakage current testers, Earth/ground testers, Automation options",
+        "items_th": "เครื่องวิเคราะห์ความปลอดภัย vPad-Mini, เครื่องวัดฉนวน, เครื่องวัดกระแสรั่ว, เครื่องวัดกราวด์, ตัวเลือกการทำงานอัตโนมัติ"
+      },
+      {
+        "title_en": "Patient Simulation Equipment",
+        "title_th": "อุปกรณ์จำลองผู้ป่วย",
+        "items_en": "ECG simulators, SpO2 (Oxygen saturation) simulators, NIBP (Blood pressure) simulators, Vital signs simulators, Multi-function patient simulators",
+        "items_th": "เครื่องจำลอง ECG, เครื่องจำลองระดับออกซิเจน (SpO2), เครื่องจำลองความดันโลหิต (NIBP), เครื่องจำลองสัญญาณชีพจร, เครื่องจำลองผู้ป่วยแบบหลายฟังก์ชัน"
+      },
+      {
+        "title_en": "Infusion Pump & Device Analyzers",
+        "title_th": "เครื่องวิเคราะห์ปั๊มหลอดและอุปกรณ์อื่น",
+        "items_en": "vPad-IV infusion pump analyzer, Defibrillator analyzers, AED testers, Electrosurgery analyzers, CMMS integration",
+        "items_th": "เครื่องวิเคราะห์ปั๊มหลอด vPad-IV, เครื่องวิเคราะห์ตัวสั่นไฟฟ้า, เครื่องทดสอบ AED, เครื่องวิเคราะห์ศัลยกรรมไฟฟ้า, การผสานรวม CMMS"
+      }
+    ]
+  },
+  "aep": {
+    "name": "AEP transducers",
+    "categories": [
+      {
+        "title_en": "Load Cells & Weighing",
+        "title_th": "โหลดเซลล์และตัวแปลงสัญญาณชั่งน้ำหนัก",
+        "items_en": "Single point load cells, Shear beam load cells, Compression load cells, Tension load cells, Custom load cells, Junction boxes, Weighing modules",
+        "items_th": "โหลดเซลล์แบบจุดเดี่ยว, โหลดเซลล์แบบเฉือน, โหลดเซลล์แบบกดแรง, โหลดเซลล์แบบดึง, โหลดเซลล์ตามต้องการ, กล่องรวมสัญญาณ, โมดูลชั่งน้ำหนัก"
+      },
+      {
+        "title_en": "Force & Torque Transducers",
+        "title_th": "ตัวแปลงสัญญาณแรงและแรงบิด",
+        "items_en": "Force transducers (tension and compression), Torque transducers, Multi-axis force sensors, Dynamometers, Calibration services",
+        "items_th": "ตัวแปลงสัญญาณแรง (ดึงและกดแรง), ตัวแปลงสัญญาณแรงบิด, เซนเซอร์แรงแบบหลายแกน, ไดนาโมมิเตอร์, บริการสอบเทียบ"
+      },
+      {
+        "title_en": "Pressure & Displacement",
+        "title_th": "ตัวแปลงสัญญาณความดันและการเคลื่อนที่",
+        "items_en": "Pressure transducers, Pressure gauges, Displacement transducers, LVDT (Linear Variable Displacement), Flush diaphragm sensors, Stainless steel designs",
+        "items_th": "ตัวแปลงสัญญาณความดัน, เกจวัดความดัน, ตัวแปลงสัญญาณการเคลื่อนที่, LVDT, เซนเซอร์แบบฟลัช, ออกแบบสแตนเลส"
+      },
+      {
+        "title_en": "Software & Instruments",
+        "title_th": "ซอฟต์แวร์และระบบวัด",
+        "items_en": "Measurement software, Data acquisition systems, Calibration instruments, Signal conditioning amplifiers, Display units",
+        "items_th": "ซอฟต์แวร์วัด, ระบบเก็บข้อมูล, เครื่องมือสอบเทียบ, แอมปลิฟายเออร์ปรับสัญญาณ, หน่วยแสดงผล"
+      }
+    ]
+  },
+  "imt": {
+    "name": "IMT Analytics",
+    "categories": [
+      {
+        "title_en": "Gas Flow Analyzers",
+        "title_th": "เครื่องวิเคราะห์การไหลของแก๊ส",
+        "items_en": "Bench top gas flow analyzers, Mobile gas flow analyzers, CITREX H3 entry-level analyzer, Ventilator testing, Anesthesia device testing",
+        "items_th": "เครื่องวิเคราะห์การไหลของแก๊สแบบตั้งโต๊ะ, เครื่องวิเคราะห์การไหลของแก๊สแบบพกพา, CITREX H3, ทดสอบเครื่องหายใจ, ทดสอบอุปกรณ์ระดับความเสดือ"
+      },
+      {
+        "title_en": "Flow Measurement Devices",
+        "title_th": "อุปกรณ์วัดการไหล",
+        "items_en": "Portable flow meters, Stationary flow meters, Gas composition analyzers, Precision measurement devices",
+        "items_th": "เครื่องวัดการไหลแบบพกพา, เครื่องวัดการไหลแบบติดตั้ง, เครื่องวิเคราะห์องค์ประกอบแก๊ส, อุปกรณ์วัดความแม่นยำสูง"
+      },
+      {
+        "title_en": "Lung Simulation & Testing",
+        "title_th": "การจำลองปอดและการทดสอบ",
+        "items_en": "SmartLung 2000 (Adult test lung), EasyLung Neonatal (Neonatal test lung), alveo Lung Simulator (Advanced simulator), Test lung accessories",
+        "items_th": "SmartLung 2000 (ปอดทดสอบผู้ใหญ่), EasyLung Neonatal (ปอดทดสอบเด็กแรกเกิด), alveo Lung Simulator (จำลองปอดขั้นสูง), อุปกรณ์เสริมปอดทดสอบ"
+      },
+      {
+        "title_en": "Calibration Services",
+        "title_th": "บริการสอบเทียบ",
+        "items_en": "EasyCal annual calibration subscription, ISO 17025 accredited calibration, Maintenance and software updates, Global calibration service",
+        "items_th": "การสมัครสมาชิก EasyCal สอบเทียบประจำปี, สอบเทียบตามมาตรฐาน ISO 17025, บำรุงรักษาและอัปเดตซอฟต์แวร์, บริการสอบเทียบระดับโลก"
+      }
+    ]
+  },
+  "rigel": {
+    "name": "Rigel Medical",
+    "categories": [
+      {
+        "title_en": "Electrical Safety Analyzers",
+        "title_th": "เครื่องวิเคราะห์ความปลอดภัยไฟฟ้า",
+        "items_en": "Rigel 288+ electrical safety analyzer, AC/DC leakage current testers, Insulation resistance testers, Earth bond testers, IEC 60601 & IEC 62353 compliance",
+        "items_th": "เครื่องวิเคราะห์ความปลอดภัย Rigel 288+, เครื่องวัดกระแสรั่ว AC/DC, เครื่องวัดความต้านทานฉนวน, เครื่องทดสอบกราวด์บอนด์, ปฏิบัติตาม IEC 60601 & IEC 62353"
+      },
+      {
+        "title_en": "Patient Simulation Equipment",
+        "title_th": "อุปกรณ์จำลองผู้ป่วย",
+        "items_en": "Vital signs simulators, ECG simulators, SpO2 (pulse oximetry) simulators, NIBP (blood pressure) simulators, Multi-function patient simulators",
+        "items_th": "เครื่องจำลองสัญญาณชีพจร, เครื่องจำลอง ECG, เครื่องจำลอง SpO2, เครื่องจำลอง NIBP, เครื่องจำลองผู้ป่วยแบบหลายฟังก์ชัน"
+      },
+      {
+        "title_en": "Specialized Device Testers",
+        "title_th": "เครื่องทดสอบอุปกรณ์เฉพาะทาง",
+        "items_en": "Infusion pump analyzers, Defibrillator analyzers, AED testers, Electrosurgery analyzers, Ventilator testing systems, Gas flow analyzers",
+        "items_th": "เครื่องวิเคราะห์ปั๊มหลอด, เครื่องวิเคราะห์ตัวสั่นไฟฟ้า, เครื่องทดสอบ AED, เครื่องวิเคราะห์ศัลยกรรมไฟฟ้า, ระบบทดสอบเครื่องหายใจ, เครื่องวิเคราะห์การไหลของแก๊ส"
+      },
+      {
+        "title_en": "Software & Support Services",
+        "title_th": "ซอฟต์แวร์และบริการสนับสนุน",
+        "items_en": "Med-eBase data management software, Calibration services, Technical support, Free testing guides (IEC 60601, IEC 62353, Defibrillation), Training programs",
+        "items_th": "ซอฟต์แวร์ Med-eBase สำหรับจัดการข้อมูล, บริการสอบเทียบ, การสนับสนุนทางเทคนิค, คู่มือทดสอบฟรี, โปรแกรมฝึกอบรม"
+      }
+    ]
+  },
+  "foremount": {
+    "name": "Foremount",
+    "categories": [
+      {
+        "title_en": "Airway Management Equipment",
+        "title_th": "อุปกรณ์จัดการทางเดินหายใจ",
+        "items_en": "Laryngoscopes (fiber-optic and digital), Intubation tubes, Airway adjuncts, Breathing circuits, Anesthesia masks, Endoscopes for airway visualization",
+        "items_th": "ลาริงโกสโคป (ไฟเบอร์ออปติกและดิจิตอล), หลอดสูบลม, อุปกรณ์ช่วยการหายใจ, วงจรทำให้สตึก, หน้ากากสำหรับสูบแก๊ส, เอนโดสโคปสำหรับการมองเห็นทางเดินหายใจ"
+      },
+      {
+        "title_en": "Anesthesia Delivery Systems",
+        "title_th": "ระบบส่งมอบสารยาสตึก",
+        "items_en": "Anesthesia machines, Vaporizers, Regulators, Gas delivery systems, Oxygen concentrators, Ventilator equipment, Monitoring systems",
+        "items_th": "เครื่องสตึก, ตัวปล่อยไอ, ตัวควบคุมแรงดัน, ระบบส่งแก๊ส, เครื่องเข้มข้นออกซิเจน, อุปกรณ์เครื่องหายใจ, ระบบตรวจสอบ"
+      },
+      {
+        "title_en": "Accessories & Consumables",
+        "title_th": "อุปกรณ์เสริมและวัสดุสิ้นเปลือง",
+        "items_en": "Breathing tubes, Gas supply tubes, Hoses, Connectors, Filters, Replaceable components, Maintenance supplies",
+        "items_th": "หลอดสูบแก๊ส, ท่อจ่ายแก๊ส, สายยาง, ตัวต่อ, ตัวกรอง, ชิ้นส่วนที่ต้องเปลี่ยน, วัสดุบำรุงรักษา"
+      }
+    ]
+  },
+  "bionit": {
+    "name": "Bionit",
+    "categories": [
+      {
+        "title_en": "Vacuum Blood Collection Systems",
+        "title_th": "ระบบเก็บตัวอย่างเลือดแบบสูญญากาศ",
+        "items_en": "Blood collection tubes (EDTA, Serum, Plasma), Needle holders and adapters, Collection sets, Vein selection accessories, Quality control products",
+        "items_th": "หลอดเก็บเลือด (EDTA, เซรั่ม, พลาสม่า), ผู้ถือเข็มและอะแดปเตอร์, ชุดเก็บตัวอย่าง, อุปกรณ์เสริมสำหรับเลือก, ผลิตภัณฑ์ควบคุมคุณภาพ"
+      },
+      {
+        "title_en": "Cytology Solutions",
+        "title_th": "สารละลายและเครื่องมือวิทยาเนื้อเยื่อ",
+        "items_en": "Cell preservation solutions, Staining reagents, Slides and covers, Microscopy accessories, Specimen collection kits",
+        "items_th": "สารละลายรักษาเซลล์, สารเคมีย้อมสี, แผ่นและตัวปิด, อุปกรณ์เสริมกล้องจุลทรรศน์, ชุดเก็บตัวอย่าง"
+      },
+      {
+        "title_en": "Medical Diagnostics Equipment",
+        "title_th": "เครื่องมือวินิจฉัยทางการแพทย์",
+        "items_en": "ECG monitors, Vital signs monitors, Thermometers, Blood pressure monitors, Pulse oximeters, Point-of-care testing devices",
+        "items_th": "จอแสดง ECG, จอแสดงสัญญาณชีพจร, เครื่องวัดอุณหภูมิ, เครื่องวัดความดันโลหิต, เครื่องวัดความอิ่มตัวออกซิเจน, อุปกรณ์ทดสอบ POC"
+      },
+      {
+        "title_en": "Electronic Testing Equipment",
+        "title_th": "เครื่องมือทดสอบอิเล็กทรอนิกส์",
+        "items_en": "Oscilloscopes, Function generators, Power supplies, Multimeters, Logic analyzers, Laboratory test instruments",
+        "items_th": "ออสซิลโลสโคป, เครื่องสร้างสัญญาณ, ชุดจ่ายไฟ, มัลติมิเตอร์, วิเคราะห์ลอจิก, เครื่องมือทดสอบห้องปฏิบัติการ"
+      }
+    ]
+  }
+}
