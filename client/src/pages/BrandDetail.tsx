@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,25 +21,39 @@ import {
 import { motion } from "framer-motion";
 import { Link, useRoute } from "wouter";
 import { useLanguage } from "@/context/LanguageContext";
-
-// Import Data
-import brandProducts from "@/data/brand_products.json";
-import brandsData from "@/data/brands.json";
-
-interface ProductCategory {
-  title_en: string;
-  title_th: string;
-  items_en: string;
-  items_th: string;
-}
+import { getBrands, getCategoriesByBrand, Brand, Category } from "@/lib/supabase";
 
 export default function BrandDetail() {
   const { t, language } = useLanguage();
   const [match, params] = useRoute("/brands/:brandId");
+  const [brandInfo, setBrandInfo] = useState<Brand | null>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const brandId = params?.brandId as string;
-  const brandData = (brandProducts as any)[brandId];
-  const brandInfo = brandsData.find((b: any) => b.id === brandId);
+
+  useEffect(() => {
+    if (brandId) {
+      loadData();
+    }
+  }, [brandId]);
+
+  const loadData = async () => {
+    setLoading(true);
+    try {
+      // Load brand info
+      const brands = await getBrands();
+      const brand = brands.find(b => b.id === brandId);
+      setBrandInfo(brand || null);
+
+      // Load categories
+      const cats = await getCategoriesByBrand(brandId);
+      setCategories(cats);
+    } catch (error) {
+      console.error('Error loading data:', error);
+    }
+    setLoading(false);
+  };
 
   // Helper to get icon based on category title
   const getCategoryIcon = (title: string) => {
@@ -57,7 +72,15 @@ export default function BrandDetail() {
     return <Box className="h-6 w-6 text-primary" />;
   };
 
-  if (!match || !brandData || !brandInfo) {
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  if (!match || !brandInfo) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
         <div className="text-center">
@@ -113,7 +136,7 @@ export default function BrandDetail() {
               className="h-32 w-32 md:h-40 md:w-40 rounded-2xl bg-blue-600 shadow-xl shadow-blue-200/50 flex items-center justify-center p-4 border border-blue-500"
             >
               <img
-                src={brandInfo.logo}
+                src={brandInfo.logo || ''}
                 alt={brandInfo.name}
                 className="max-h-full max-w-full object-contain"
               />
@@ -134,7 +157,7 @@ export default function BrandDetail() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className={`mt-4 text-lg md:text-xl max-w-2xl leading-relaxed ${brandInfo.cover_image ? 'text-slate-200' : 'text-slate-500'}`}
               >
-                {language === "TH" ? brandData.description_th : brandData.description_en}
+                {language === "TH" ? brandInfo.description_th : brandInfo.description_en}
               </motion.div>
             </div>
           </div>
@@ -153,62 +176,68 @@ export default function BrandDetail() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {brandData.categories.map((category: ProductCategory, index: number) => {
-              const categoryTitle = language === "TH" ? category.title_th : category.title_en;
-              const categoryItems = language === "TH" ? category.items_th : category.items_en;
-              const items = categoryItems.split(", ");
+          {categories.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-slate-500">{t("ยังไม่มีหมวดหมู่สินค้า", "No categories available")}</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {categories.map((category, index) => {
+                const categoryTitle = language === "TH" ? category.title_th : category.title_en;
+                const categoryItems = language === "TH" ? category.items_th : category.items_en;
+                const items = categoryItems ? categoryItems.split(", ") : [];
 
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05, duration: 0.4 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                >
-                  <Link href={`/brands/${brandId}/category/${index}`}>
-                    <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ring-1 ring-slate-100 cursor-pointer group">
-                      <div className={`h-1.5 w-full ${index % 4 === 0 ? "bg-blue-500" :
-                        index % 4 === 1 ? "bg-indigo-500" :
-                          index % 4 === 2 ? "bg-cyan-500" : "bg-teal-500"
-                        }`} />
+                return (
+                  <motion.div
+                    key={category.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05, duration: 0.4 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                  >
+                    <Link href={`/brands/${brandId}/category/${index}`}>
+                      <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ring-1 ring-slate-100 cursor-pointer group">
+                        <div className={`h-1.5 w-full ${index % 4 === 0 ? "bg-blue-500" :
+                          index % 4 === 1 ? "bg-indigo-500" :
+                            index % 4 === 2 ? "bg-cyan-500" : "bg-teal-500"
+                          }`} />
 
-                      <CardHeader className="pb-4">
-                        <div className="flex items-center gap-4">
-                          <div className="p-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:bg-blue-50 transition-colors">
-                            {getCategoryIcon(category.title_en)}
+                        <CardHeader className="pb-4">
+                          <div className="flex items-center gap-4">
+                            <div className="p-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:bg-blue-50 transition-colors">
+                              {getCategoryIcon(category.title_en)}
+                            </div>
+                            <CardTitle className="text-xl font-bold text-slate-900 leading-tight group-hover:text-primary transition-colors">
+                              {categoryTitle}
+                            </CardTitle>
                           </div>
-                          <CardTitle className="text-xl font-bold text-slate-900 leading-tight group-hover:text-primary transition-colors">
-                            {categoryTitle}
-                          </CardTitle>
-                        </div>
-                      </CardHeader>
+                        </CardHeader>
 
-                      <CardContent>
-                        <div className="flex flex-wrap gap-2">
-                          {items.slice(0, 5).map((item: string, itemIdx: number) => (
-                            <Badge
-                              key={itemIdx}
-                              variant="secondary"
-                              className="bg-slate-50 group-hover:bg-white text-slate-600 border-slate-100 transition-colors py-1.5 px-3 text-sm font-normal"
-                            >
-                              {item.trim()}
-                            </Badge>
-                          ))}
-                          {items.length > 5 && (
-                            <Badge variant="outline" className="bg-transparent text-muted-foreground border-dashed">
-                              +{items.length - 5} {t("เพิ่มเติม", "More")}
-                            </Badge>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
+                        <CardContent>
+                          <div className="flex flex-wrap gap-2">
+                            {items.slice(0, 5).map((item: string, itemIdx: number) => (
+                              <Badge
+                                key={itemIdx}
+                                variant="secondary"
+                                className="bg-slate-50 group-hover:bg-white text-slate-600 border-slate-100 transition-colors py-1.5 px-3 text-sm font-normal"
+                              >
+                                {item.trim()}
+                              </Badge>
+                            ))}
+                            {items.length > 5 && (
+                              <Badge variant="outline" className="bg-transparent text-muted-foreground border-dashed">
+                                +{items.length - 5} {t("เพิ่มเติม", "More")}
+                              </Badge>
+                            )}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 

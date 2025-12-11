@@ -20,7 +20,9 @@ export default function ProductGroupDetail() {
     const categoryIndex = parseInt(params?.categoryIndex || '0');
 
     useEffect(() => {
-        loadData();
+        if (brandId) {
+            loadData();
+        }
     }, [brandId, categoryIndex]);
 
     const loadData = async () => {
@@ -36,9 +38,11 @@ export default function ProductGroupDetail() {
             const cat = categories[categoryIndex];
             setCategory(cat || null);
 
-            // Load products for this category and brand
-            const prods = await getProductsByCategory(categoryIndex + 1, brandId);
-            setProducts(prods);
+            // Load products for this category using actual category ID
+            if (cat) {
+                const prods = await getProductsByCategory(cat.id, brandId);
+                setProducts(prods);
+            }
         } catch (error) {
             console.error('Error loading data:', error);
         }

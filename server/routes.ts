@@ -374,5 +374,52 @@ export async function registerRoutes(
     }
   });
 
+  // =====================
+  // ADMIN USERS API
+  // =====================
+
+  // Get all admin users
+  app.get("/api/admin-users", async (_req: Request, res: Response) => {
+    try {
+      const { data, error } = await supabase.from("admin_users").select("*");
+      if (error) {
+        console.error("Admin users fetch error:", error.message);
+        // If table doesn't exist, return empty array instead of error
+        if (error.message.includes("does not exist") || error.code === "42P01") {
+          return res.json([]);
+        }
+        return res.status(500).json({ error: error.message });
+      }
+      res.json(data || []);
+    } catch (err: any) {
+      console.error("Admin users error:", err);
+      res.json([]); // Fallback to empty array
+    }
+  });
+
+  // Add admin user
+  app.post("/api/admin-users", async (req: Request, res: Response) => {
+    const { email } = req.body;
+    if (!email) return res.status(400).json({ error: "Email is required" });
+
+    const { data, error } = await supabase
+      .from("admin_users")
+      .insert({ email: email.toLowerCase() })
+      .select()
+      .single();
+    if (error) return res.status(400).json({ error: error.message });
+    res.status(201).json(data);
+  });
+
+  // Delete admin user
+  app.delete("/api/admin-users/:id", async (req: Request, res: Response) => {
+    const { error } = await supabase
+      .from("admin_users")
+      .delete()
+      .eq("id", req.params.id);
+    if (error) return res.status(400).json({ error: error.message });
+    res.json({ success: true });
+  });
+
   return httpServer;
 }

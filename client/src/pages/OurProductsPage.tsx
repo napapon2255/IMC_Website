@@ -1,26 +1,31 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-// 1. Import JSON เข้ามา
-import brandsData from "../data/brands.json";
 import labOverviewImage from "@/assets/images/laboratory-overview.png";
-// 2. Import Context ภาษา
 import { useLanguage } from "@/context/LanguageContext";
-
-// กำหนด Type ของข้อมูล JSON เพื่อให้ TypeScript ไม่แจ้งเตือน (Optional)
-interface Brand {
-  id: string;
-  name: string;
-  logo: string;
-  description_en: string;
-  description_th: string;
-}
+import { getBrands, Brand } from "@/lib/supabase";
 
 export default function OurProductsPage() {
-  // 3. ดึงค่า language และ t function
   const { language, t } = useLanguage();
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadBrands();
+  }, []);
+
+  const loadBrands = async () => {
+    try {
+      const data = await getBrands();
+      setBrands(data);
+    } catch (error) {
+      console.error('Error loading brands:', error);
+    }
+    setLoading(false);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,6 +46,14 @@ export default function OurProductsPage() {
       transition: { duration: 0.5 },
     },
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50">
@@ -124,7 +137,7 @@ export default function OurProductsPage() {
 
           {/* Brand Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {(brandsData as Brand[]).map((brand, index) => {
+            {brands.map((brand, index) => {
               const displayDescription = language === "TH" ? brand.description_th : brand.description_en;
 
               return (
@@ -143,7 +156,7 @@ export default function OurProductsPage() {
                         {/* Logo Container */}
                         <div className="h-24 w-full rounded-xl bg-blue-600 flex items-center justify-center mb-4 overflow-hidden border border-blue-500 shadow-md">
                           <img
-                            src={brand.logo}
+                            src={brand.logo || ''}
                             alt={brand.name}
                             className="max-h-20 max-w-full object-contain px-4 group-hover:scale-110 transition-transform duration-300"
                             onError={(e) => {

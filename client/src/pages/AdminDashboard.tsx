@@ -12,12 +12,17 @@ import {
     FolderOpen,
     ArrowLeft,
     RefreshCw,
-    ShoppingBag
+    ShoppingBag,
+    LogOut,
+    Users,
+    UserPlus,
+    Mail
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useAuth } from "@/context/AuthContext";
 import { Textarea } from "@/components/ui/textarea";
 import {
     Brand,
@@ -40,7 +45,10 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function AdminDashboard() {
     const { toast } = useToast();
-    const [activeTab, setActiveTab] = useState<"brands" | "categories" | "products" | "images">("brands");
+    const { user, signOut } = useAuth();
+    const [activeTab, setActiveTab] = useState<"brands" | "categories" | "products" | "images" | "admins">("brands");
+    const [adminUsers, setAdminUsers] = useState<{ id: number; email: string; name?: string }[]>([]);
+    const [newAdminEmail, setNewAdminEmail] = useState('');
     const [brands, setBrands] = useState<Brand[]>([]);
     const [categories, setCategories] = useState<Category[]>([]);
     const [products, setProducts] = useState<Product[]>([]);
@@ -52,7 +60,7 @@ export default function AdminDashboard() {
     const [editingProduct, setEditingProduct] = useState<Product | null>(null);
     const [isCreating, setIsCreating] = useState(false);
 
-    useEffect(() => { loadBrands(); }, []);
+    useEffect(() => { loadBrands(); loadAdminUsers(); }, []);
     useEffect(() => { if (selectedBrand) loadCategories(selectedBrand); }, [selectedBrand]);
     useEffect(() => { if (selectedCategory) loadProducts(selectedCategory); }, [selectedCategory]);
 
@@ -132,6 +140,54 @@ export default function AdminDashboard() {
         } catch (e: any) { toast({ title: "Error", description: e.message, variant: "destructive" }); }
     };
 
+    // Admin user management
+    const loadAdminUsers = async () => {
+        try {
+            const res = await fetch('/api/admin-users');
+            if (res.ok) {
+                const data = await res.json();
+                setAdminUsers(data);
+            }
+        } catch (e: any) {
+            console.error('Error loading admin users:', e);
+        }
+    };
+
+    const handleAddAdmin = async () => {
+        if (!newAdminEmail || !newAdminEmail.includes('@')) {
+            toast({ title: "Error", description: "Please enter a valid email", variant: "destructive" });
+            return;
+        }
+        try {
+            const res = await fetch('/api/admin-users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: newAdminEmail })
+            });
+            if (!res.ok) {
+                const error = await res.json();
+                throw new Error(error.error || 'Failed to add admin');
+            }
+            toast({ title: "Success", description: "Admin added!" });
+            setNewAdminEmail('');
+            loadAdminUsers();
+        } catch (e: any) {
+            toast({ title: "Error", description: e.message, variant: "destructive" });
+        }
+    };
+
+    const handleDeleteAdmin = async (id: number) => {
+        if (!confirm("Remove this admin?")) return;
+        try {
+            const res = await fetch(`/api/admin-users/${id}`, { method: 'DELETE' });
+            if (!res.ok) throw new Error('Failed to delete admin');
+            toast({ title: "Success", description: "Admin removed!" });
+            loadAdminUsers();
+        } catch (e: any) {
+            toast({ title: "Error", description: e.message, variant: "destructive" });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-slate-50">
             <header className="bg-white border-b sticky top-0 z-50">
@@ -140,9 +196,15 @@ export default function AdminDashboard() {
                         <Link href="/"><Button variant="ghost" size="icon"><ArrowLeft className="h-5 w-5" /></Button></Link>
                         <h1 className="text-2xl font-bold text-slate-900">Admin Dashboard</h1>
                     </div>
-                    <Button onClick={migrateData} variant="outline" className="gap-2">
-                        <RefreshCw className="h-4 w-4" /> Import from JSON
-                    </Button>
+                    <div className="flex items-center gap-4">
+                        <span className="text-sm text-slate-500 hidden md:block">{user?.email}</span>
+                        <Button onClick={migrateData} variant="outline" className="gap-2">
+                            <RefreshCw className="h-4 w-4" /> Import from JSON
+                        </Button>
+                        <Button onClick={signOut} variant="destructive" className="gap-2">
+                            <LogOut className="h-4 w-4" /> Logout
+                        </Button>
+                    </div>
                 </div>
             </header>
 
@@ -160,6 +222,9 @@ export default function AdminDashboard() {
                     </Button>
                     <Button variant={activeTab === "images" ? "default" : "outline"} onClick={() => setActiveTab("images")} className="gap-2">
                         <ImageIcon className="h-4 w-4" /> Images
+                    </Button>
+                    <Button variant={activeTab === "admins" ? "default" : "outline"} onClick={() => setActiveTab("admins")} className="gap-2">
+                        <Users className="h-4 w-4" /> Admins
                     </Button>
                 </div>
 
@@ -293,6 +358,77 @@ export default function AdminDashboard() {
                             <ImageIcon className="h-12 w-12 mx-auto mb-4 opacity-50" />
                             <p>Image management coming soon...</p>
                         </CardContent></Card>
+                    </div>
+                )}
+
+                {/* Admins Tab */}
+                {activeTab === "admins" && (
+                    <div className="space-y-6">
+                        <div className="flex justify-between items-center">
+                            <h2 className="text-xl font-bold">Manage Admin Users</h2>
+                        </div>
+
+                        {/* Add Admin Form */}
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2">
+                                    <UserPlus className="h-5 w-5" /> Add New Admin
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="flex gap-4">
+                                    <div className="flex-1">
+                                        <Input
+                                            type="email"
+                                            placeholder="Enter email address"
+                                            value={newAdminEmail}
+                                            onChange={(e) => setNewAdminEmail(e.target.value)}
+                                        />
+                                    </div>
+                                    <Button onClick={handleAddAdmin} className="gap-2">
+                                        <Plus className="h-4 w-4" /> Add Admin
+                                    </Button>
+                                </div>
+                                <p className="text-sm text-slate-500 mt-2">
+                                    Note: The user must first create an account via the login page.
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        {/* Admin List */}
+                        <div className="grid gap-4">
+                            {adminUsers.map((admin) => (
+                                <Card key={admin.id} className="hover:shadow-md transition-shadow">
+                                    <CardContent className="p-4 flex items-center justify-between">
+                                        <div className="flex items-center gap-4">
+                                            <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                                <Mail className="h-5 w-5 text-primary" />
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold">{admin.email}</h3>
+                                                {admin.name && <p className="text-sm text-slate-500">{admin.name}</p>}
+                                            </div>
+                                        </div>
+                                        <Button
+                                            size="sm"
+                                            variant="destructive"
+                                            onClick={() => handleDeleteAdmin(admin.id)}
+                                            disabled={admin.email === user?.email}
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                            {adminUsers.length === 0 && (
+                                <Card>
+                                    <CardContent className="p-8 text-center text-slate-500">
+                                        <Users className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                                        <p>No admin users found</p>
+                                    </CardContent>
+                                </Card>
+                            )}
+                        </div>
                     </div>
                 )}
             </div>

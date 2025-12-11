@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,30 +20,43 @@ import {
 import { motion } from "framer-motion";
 import { Link, useRoute } from "wouter";
 import { useLanguage } from "@/context/LanguageContext";
-
-// Import Data
-import brandProducts from "@/data/brand_products.json";
-import brandsData from "@/data/brands.json";
-
-interface ProductCategory {
-    title_en: string;
-    title_th: string;
-    items_en: string;
-    items_th: string;
-}
+import { getBrands, getCategoriesByBrand, Brand, Category } from "@/lib/supabase";
 
 export default function CategoryDetail() {
     const { t, language } = useLanguage();
     const [match, params] = useRoute("/brands/:brandId/category/:categoryIndex");
+    const [brandInfo, setBrandInfo] = useState<Brand | null>(null);
+    const [category, setCategory] = useState<Category | null>(null);
+    const [loading, setLoading] = useState(true);
 
     const brandId = params?.brandId as string;
     const categoryIndex = parseInt(params?.categoryIndex as string);
 
-    const brandData = (brandProducts as any)[brandId];
-    const brandInfo = brandsData.find((b: any) => b.id === brandId);
-    const category = brandData?.categories[categoryIndex] as ProductCategory;
+    useEffect(() => {
+        if (brandId) {
+            loadData();
+        }
+    }, [brandId, categoryIndex]);
 
-    // Helper to get icon based on category title (same as BrandDetail to maintain consistency)
+    const loadData = async () => {
+        setLoading(true);
+        try {
+            // Load brand info
+            const brands = await getBrands();
+            const brand = brands.find(b => b.id === brandId);
+            setBrandInfo(brand || null);
+
+            // Load categories
+            const cats = await getCategoriesByBrand(brandId);
+            const cat = cats[categoryIndex];
+            setCategory(cat || null);
+        } catch (error) {
+            console.error('Error loading data:', error);
+        }
+        setLoading(false);
+    };
+
+    // Helper to get icon based on category title
     const getCategoryIcon = (title: string) => {
         const lowerTitle = title.toLowerCase();
 
@@ -59,7 +73,15 @@ export default function CategoryDetail() {
         return <Box className="h-8 w-8 text-primary" />;
     };
 
-    if (!match || !brandData || !brandInfo || !category) {
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            </div>
+        );
+    }
+
+    if (!match || !brandInfo || !category) {
         return (
             <div className="min-h-screen bg-slate-50 flex items-center justify-center">
                 <div className="text-center">
@@ -74,7 +96,7 @@ export default function CategoryDetail() {
 
     const categoryTitle = language === "TH" ? category.title_th : category.title_en;
     const categoryItems = language === "TH" ? category.items_th : category.items_en;
-    const items = categoryItems.split(", ");
+    const items = categoryItems ? categoryItems.split(", ") : [];
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans">
@@ -97,7 +119,7 @@ export default function CategoryDetail() {
                         <div className="flex items-center gap-3">
                             <div className="h-8 w-auto px-2 bg-blue-600 rounded flex items-center justify-center hidden md:flex">
                                 <img
-                                    src={brandInfo.logo}
+                                    src={brandInfo.logo || ''}
                                     alt={brandInfo.name}
                                     className="max-h-full max-w-[80px] object-contain"
                                 />
@@ -135,38 +157,44 @@ export default function CategoryDetail() {
                     </motion.div>
 
                     {/* Items Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {items.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: index * 0.05, duration: 0.4 }}
-                                viewport={{ once: true }}
-                            >
-                                <Link href={`/brands/${brandId}/category/${categoryIndex}/group/${index}`}>
-                                    <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group ring-1 ring-slate-100 cursor-pointer">
-                                        <CardContent className="p-6 flex flex-col items-start gap-4 h-full">
-                                            <div className="p-3 bg-slate-50 rounded-xl group-hover:bg-primary/10 transition-colors">
-                                                <Box className="h-6 w-6 text-slate-400 group-hover:text-primary transition-colors" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
-                                                    {item.trim()}
-                                                </h3>
-                                                <p className="text-sm text-slate-500">
-                                                    {brandInfo.name} Product
-                                                </p>
-                                            </div>
-                                            <div className="mt-auto pt-4 flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
-                                                {t("ดูรายละเอียด", "View Details")} <ChevronRight className="ml-1 h-4 w-4" />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </Link>
-                            </motion.div>
-                        ))}
-                    </div>
+                    {items.length === 0 ? (
+                        <div className="text-center py-12">
+                            <p className="text-slate-500">{t("ยังไม่มีรายการสินค้า", "No items available")}</p>
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            {items.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: index * 0.05, duration: 0.4 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Link href={`/brands/${brandId}/category/${categoryIndex}/group/${index}`}>
+                                        <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group ring-1 ring-slate-100 cursor-pointer">
+                                            <CardContent className="p-6 flex flex-col items-start gap-4 h-full">
+                                                <div className="p-3 bg-slate-50 rounded-xl group-hover:bg-primary/10 transition-colors">
+                                                    <Box className="h-6 w-6 text-slate-400 group-hover:text-primary transition-colors" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                                                        {item.trim()}
+                                                    </h3>
+                                                    <p className="text-sm text-slate-500">
+                                                        {brandInfo.name} Product
+                                                    </p>
+                                                </div>
+                                                <div className="mt-auto pt-4 flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+                                                    {t("ดูรายละเอียด", "View Details")} <ChevronRight className="ml-1 h-4 w-4" />
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
+                    )}
 
                     <div className="mt-20 text-center">
                         <Link href="/contact">

@@ -165,11 +165,22 @@
   },
   {
     "id": 17,
-    "name_en": "sdfsds",
-    "name_th": "dfs",
-    "price": "฿1254",
-    "description_en": "xzc",
-    "description_th": "zcx",
+    "name_en": "test",
+    "name_th": "test",
+    "image": "sdsd",
+    "price": "฿1144",
+    "description_en": "dsd",
+    "description_th": "sdsd",
+    "category_id": 1,
+    "brand_id": "sika"
+  },
+  {
+    "id": 18,
+    "name_en": "ewew",
+    "name_th": "wewe",
+    "price": "฿1234",
+    "description_en": "wewe",
+    "description_th": "wewe",
     "category_id": 1,
     "brand_id": "sika"
   }

@@ -10,6 +10,8 @@ import Home from "@/pages/Home";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { AuthProvider } from "@/context/AuthContext";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import OurProductsPage from "./pages/OurProductsPage";
 import BrandDetail from "./pages/BrandDetail";
 import CategoryDetail from "./pages/CategoryDetail";
@@ -21,30 +23,99 @@ import SoftwareManagement from "./pages/SoftwareManagement";
 import AutomationControl from "./pages/RenovateService";
 import RepairInspection from "./pages/RepairInspection";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminLogin from "./pages/AdminLogin";
 
 
 function Router() {
   return (
     <div className="min-h-screen bg-background font-sans">
       <LanguageProvider>
-        <Navbar />
-        <ScrollToTop />
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/admin" component={AdminDashboard} />
-          <Route path="/brands/:brandId" component={BrandDetail} />
-          <Route path="/brands/:brandId/category/:categoryIndex" component={CategoryDetail} />
-          <Route path="/brands/:brandId/category/:categoryIndex/group/:groupIndex" component={ProductGroupDetail} />
-          <Route path="/certified/:category" component={CertifiedDetail} />
-          <Route path="/products/our-products" component={OurProductsPage} />
-          <Route path="/products/calibration-testing" component={CalibrationTesting} />
-          <Route path="/products/training-consultant" component={TrainingConsultant} />
-          <Route path="/products/software-management" component={SoftwareManagement} />
-          <Route path="/products/automation-control" component={AutomationControl} />
-          <Route path="/products/repair-inspection" component={RepairInspection} />
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
+        <AuthProvider>
+          <ScrollToTop />
+          <Switch>
+            {/* Admin routes - no navbar/footer */}
+            <Route path="/admin/login" component={AdminLogin} />
+            <Route path="/admin">
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            </Route>
+
+            {/* Public routes with navbar/footer */}
+            <Route path="/">
+              <Navbar />
+              <Home />
+              <Footer />
+            </Route>
+
+            <Route path="/brands/:brandId">
+              <Navbar />
+              <BrandDetail />
+              <Footer />
+            </Route>
+
+            <Route path="/brands/:brandId/category/:categoryIndex">
+              <Navbar />
+              <CategoryDetail />
+              <Footer />
+            </Route>
+
+            <Route path="/brands/:brandId/category/:categoryIndex/group/:groupIndex">
+              <Navbar />
+              <ProductGroupDetail />
+              <Footer />
+            </Route>
+
+            <Route path="/certified/:category">
+              <Navbar />
+              <CertifiedDetail />
+              <Footer />
+            </Route>
+
+            <Route path="/products/our-products">
+              <Navbar />
+              <OurProductsPage />
+              <Footer />
+            </Route>
+
+            <Route path="/products/calibration-testing">
+              <Navbar />
+              <CalibrationTesting />
+              <Footer />
+            </Route>
+
+            <Route path="/products/training-consultant">
+              <Navbar />
+              <TrainingConsultant />
+              <Footer />
+            </Route>
+
+            <Route path="/products/software-management">
+              <Navbar />
+              <SoftwareManagement />
+              <Footer />
+            </Route>
+
+            <Route path="/products/automation-control">
+              <Navbar />
+              <AutomationControl />
+              <Footer />
+            </Route>
+
+            <Route path="/products/repair-inspection">
+              <Navbar />
+              <RepairInspection />
+              <Footer />
+            </Route>
+
+            <Route>
+              <Navbar />
+              <NotFound />
+              <Footer />
+            </Route>
+
+          </Switch>
+        </AuthProvider>
       </LanguageProvider>
     </div>
   );
@@ -54,7 +125,6 @@ function ScrollToTop() {
   const [location] = useLocation();
 
   useEffect(() => {
-    // ทุกครั้งที่ location (URL) เปลี่ยน ให้เลื่อนขึ้นบนสุด
     window.scrollTo(0, 0);
   }, [location]);
 
